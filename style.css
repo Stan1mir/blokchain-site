@@ -102,12 +102,12 @@ nav ul {
 
 /* The card holding the text */
 .container {
-    background-color: rgba(0, 0, 0, 0.5); /* UPDATED: Semi-transparent dark card */
-    padding: 45px;
+    background-color: rgba(0, 0, 0, 0.45); /* UPDATED: Semi-transparent dark card */
+    padding: 175.11px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 555px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
