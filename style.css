@@ -251,4 +251,18 @@ h1 {
     .launch-info .launch-date {
         font-size: 1.5em;
     }
+    @media (max-width: 768px) {
+
+        /* ... all your other mobile styles ... */
+
+        .launch-info .launch-date {
+            font-size: 1.5em;
+        }
+
+        /* === ADD THIS NEW RULE HERE === */
+        .dropdown-content {
+            position: fixed;
+            top: 90px; /* Adjust this to get the perfect vertical position */
+        }
+    }
 }
