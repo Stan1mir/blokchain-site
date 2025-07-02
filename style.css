@@ -41,7 +41,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 25px 20px;
     flex-direction: row-reverse;
 }
 
@@ -101,13 +101,15 @@ nav ul {
 }
 
 /* The card holding the text */
+/* The card holding the text */
 .container {
-    background-color: rgba(0, 0, 0, 0.45); /* UPDATED: Semi-transparent dark card */
-    padding: 175.11px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 85px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 555px;
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    max-width: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateX(50px); /* <<< ADD THIS LINE */
 }
 
 h1 {
