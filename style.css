@@ -198,23 +198,41 @@ h1 {
 
 @media (max-width: 768px) {
 
-    /* Make the navigation bar items stack vertically */
+    /* Keep the logo and menu on the same line */
     .nav-container {
-        flex-direction: column; /* Stacks the logo and menu */
-        padding: 10px;
+        flex-direction: column; /* Keeps logo on top */
+        align-items: flex-start; /* Aligns logo to the left */
+        padding: 10px 15px;
     }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+    nav {
+        width: 100%; /* Make the navigation container take full width */
+        overflow-x: auto; /* THIS IS THE KEY: Allows horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS */
+        scrollbar-width: none; /* Hides the scrollbar on Firefox */
     }
 
-        nav ul li {
-            margin: 8px 0; /* Adds vertical space between links */
-            width: 100%;
-            text-align: center;
+        /* Hides scrollbar on Chrome/Safari */
+        nav::-webkit-scrollbar {
+            display: none;
         }
+
+        /* Keep the list items in a row */
+        nav ul {
+            flex-direction: row; /* Puts items side-by-side */
+            justify-content: flex-start; /* Aligns items to the left */
+            white-space: nowrap; /* Prevents items from wrapping to the next line */
+            padding-bottom: 10px; /* Adds a little space for the hidden scrollbar */
+        }
+
+            nav ul li {
+                margin-right: 20px; /* Adjust spacing between menu items */
+            }
+
+    /* Adjust content margin to make space for the new menu layout */
+    .container {
+        margin-top: 150px; /* Adjust as needed */
+    }
 
     /* Make the content box take up more screen width and have less padding */
     .container {
