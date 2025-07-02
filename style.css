@@ -206,10 +206,11 @@ h1 {
     }
 
     nav {
-        width: 100%; /* Make the navigation container take full width */
-        overflow-x: auto; /* THIS IS THE KEY: Allows horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS */
-        scrollbar-width: none; /* Hides the scrollbar on Firefox */
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scroll */
+        overflow-y: visible; /* THIS IS THE FIX: Allows the dropdown to show */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
         /* Hides scrollbar on Chrome/Safari */
