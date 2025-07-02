@@ -95,7 +95,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     height: 98svh;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -131,7 +131,7 @@ h1 {
     line-height: 1.6;
     color: #dddddd;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .launch-info {
