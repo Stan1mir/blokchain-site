@@ -24,7 +24,7 @@ body {
 
 /* --- HEADER AND NAVIGATION STYLES --- */
 .site-header {
-    background-color: rgb(20, 7, 34, 0.45);
+    background-color: rgb(20, 7, 34, 0.48);
     backdrop-filter: blur(25x);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
