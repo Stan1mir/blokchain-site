@@ -1,21 +1,22 @@
-// This function handles the dropdown menu logic
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Find the button and the dropdown content
     const dropButton = document.querySelector('.drop-btn');
     const dropdownContent = document.querySelector('.dropdown-content');
 
-    // Toggle the dropdown when the button is clicked
+    // Add a click event listener to the button
     dropButton.addEventListener('click', function (event) {
-        // This stops the link from trying to navigate away
+        // Stop the link from trying to go to a new page
         event.preventDefault();
-        // This stops the window 'click' event below from firing immediately
+        // Stop the click from immediately closing the menu (see window.onclick below)
         event.stopPropagation();
 
-        // This adds or removes the 'show' class to display/hide the menu
+        // This is the magic: add or remove the '.show' class
         dropdownContent.classList.toggle('show');
     });
 
-    // Close the dropdown if the user clicks anywhere else on the page
+    // Add a click event listener to the whole window
+    // This will close the dropdown if you click anywhere else
     window.addEventListener('click', function () {
         if (dropdownContent.classList.contains('show')) {
             dropdownContent.classList.remove('show');

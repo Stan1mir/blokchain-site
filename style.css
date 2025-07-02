@@ -153,19 +153,16 @@ h1 {
         margin: 0;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
-/* === DROPDOWN MENU STYLES (Works on Click & Touch) === */
+/* === DROPDOWN MENU STYLES (for Click/Tap) === */
 
-/* The container for the dropdown */
 .dropdown {
     position: relative;
 }
 
-/* Make the button look clickable */
 .drop-btn {
     cursor: pointer;
 }
 
-/* The dropdown content (hidden by default) */
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
@@ -176,17 +173,16 @@ h1 {
     -webkit-backdrop-filter: blur(10px);
     min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1001; /* Increase z-index to be sure it's on top */
     border-radius: 0 0 5px 5px;
     text-align: left;
 }
 
-    /* The class our JavaScript will add to show the menu */
+    /* This is the class our JavaScript will add/remove to show the menu */
     .dropdown-content.show {
         display: block;
     }
 
-    /* Links inside the dropdown */
     .dropdown-content a {
         color: #ffffff;
         padding: 12px 16px;
@@ -195,7 +191,6 @@ h1 {
         transition: background-color 0.3s ease;
     }
 
-        /* Change color of dropdown links on hover */
         .dropdown-content a:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
