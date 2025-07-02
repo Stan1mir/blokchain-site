@@ -195,10 +195,7 @@ h1 {
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-/* THIS IS THE MAGIC PART: Show the dropdown menu when you hover over the dropdown container */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 /* === MOBILE RESPONSIVE STYLES === */
 /* These styles will only apply on screens 768px wide or smaller */
 

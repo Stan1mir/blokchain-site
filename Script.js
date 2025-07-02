@@ -1,26 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Find the button and the dropdown content
-    const dropButton = document.querySelector('.drop-btn');
-    const dropdownContent = document.querySelector('.dropdown-content');
+    // Find ALL dropdowns on the page
+    const allDropdowns = document.querySelectorAll('.dropdown');
 
-    // Add a click event listener to the button
-    dropButton.addEventListener('click', function (event) {
-        // Stop the link from trying to go to a new page
-        event.preventDefault();
-        // Stop the click from immediately closing the menu (see window.onclick below)
-        event.stopPropagation();
+    // Add a click listener to EACH dropdown button
+    allDropdowns.forEach(function (dropdown) {
+        const button = dropdown.querySelector('.drop-btn');
+        const content = dropdown.querySelector('.dropdown-content');
 
-        // This is the magic: add or remove the '.show' class
-        dropdownContent.classList.toggle('show');
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // First, close all other open dropdowns
+            closeAllDropdowns(content);
+
+            // Then, toggle the one you clicked
+            content.classList.toggle('show');
+        });
     });
 
-    // Add a click event listener to the whole window
-    // This will close the dropdown if you click anywhere else
+    // Function to close all dropdowns except the one we are opening
+    function closeAllDropdowns(exceptThisOne) {
+        allDropdowns.forEach(function (dropdown) {
+            const content = dropdown.querySelector('.dropdown-content');
+            if (content !== exceptThisOne) {
+                content.classList.remove('show');
+            }
+        });
+    }
+
+    // Close all dropdowns if the user clicks anywhere else on the page
     window.addEventListener('click', function () {
-        if (dropdownContent.classList.contains('show')) {
-            dropdownContent.classList.remove('show');
-        }
+        closeAllDropdowns(null); // Passing null closes all of them
     });
 
 });
