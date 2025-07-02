@@ -193,3 +193,43 @@ h1 {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/* === MOBILE RESPONSIVE STYLES === */
+/* These styles will only apply on screens 768px wide or smaller */
+
+@media (max-width: 768px) {
+
+    /* Make the navigation bar items stack vertically */
+    .nav-container {
+        flex-direction: column; /* Stacks the logo and menu */
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+        nav ul li {
+            margin: 8px 0; /* Adds vertical space between links */
+            width: 100%;
+            text-align: center;
+        }
+
+    /* Make the content box take up more screen width and have less padding */
+    .container {
+        padding: 20px;
+        max-width: 90%; /* Use percentage instead of fixed pixels */
+        margin-top: 200px; /* Adjust margin to account for taller header */
+    }
+
+    /* Reduce the size of the main heading */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* Reduce the size of the launch date */
+    .launch-info .launch-date {
+        font-size: 1.5em;
+    }
+}
