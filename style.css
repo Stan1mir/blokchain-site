@@ -24,14 +24,14 @@ body {
 
 /* --- HEADER AND NAVIGATION STYLES --- */
 .site-header {
-    background-color: rgba(26, 36, 48, 0.5);
-    backdrop-filter: blur(10px);
+    background-color: rgb(20, 7, 34, 0.45);
+    backdrop-filter: blur(25x);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 750;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -41,7 +41,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 30px 20px;
     flex-direction: row-reverse;
 }
 
