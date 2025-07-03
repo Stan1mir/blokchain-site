@@ -94,12 +94,11 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh; /* Use vh instead of svh for better compatibility */
+    min-height: 78vh; /* Changed from height: 100vh */
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
 }
-
 /* The card holding the text */
 .container {
     background-color: rgb(0, 0, 0, 0.26);
@@ -174,11 +173,49 @@ h1, .tagline, .mission, .launch-info {
     .container {
         padding: 20px;
         max-width: 90%;
-        margin-top: 200px;
+        margin-top: 180px;
     }
 
     /* This fixes the dropdown getting cut off on mobile */
     .dropdown {
         position: static;
     }
+}
+/* === FEATURES SECTION STYLES === */
+
+.features-section {
+    background-color: #ffffff; /* A clean white background for this section */
+    padding: 60px 20px;
+    color: #333; /* Dark text for readability */
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* This creates the column layout */
+    justify-content: space-around; /* Spreads the columns out */
+    gap: 30px; /* Adds space between the columns */
+}
+
+.feature-item {
+    flex-basis: 30%; /* Each column takes up roughly a third of the space */
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3em; /* Makes the icon large */
+    color: #3498db; /* A nice blue color for the icons */
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #0d2c4e;
+}
+
+.feature-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
 }
