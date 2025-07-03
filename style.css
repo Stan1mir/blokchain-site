@@ -1,47 +1,47 @@
 ﻿/* General Body and Font Styles */
 body {
     font-family: Arial, sans-serif;
-    color: #ffffff;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f0f2f5; /* Fallback color */
 }
 
-/* Dedicated background element */
+/* This is the fixed background image container */
 .background-image-container {
     background-image: url('images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* This is the key */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: -1; /* Pushes it behind everything */
 }
 
-/* --- HEADER AND NAVIGATION STYLES --- */
+/* --- HEADER (Navigation Bar) --- */
 .site-header {
-    background-color: rgb(20, 7, 34, 0.48);
+    background-color: rgba(26, 36, 48, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 750;
+    z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ... All your other header, nav, logo, dropdown styles are fine ... */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 15px 20px;
     flex-direction: row-reverse;
 }
 
@@ -88,32 +88,6 @@ nav ul {
         color: #0d2c4e;
     }
 
-
-/* --- Main Content Centering --- */
-.content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 78vh; /* Changed from height: 100vh */
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-}
-/* The card holding the text */
-.container {
-    background-color: rgb(0, 0, 0, 0.26);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 5px rgb(0, 0, 0, 0.26);
-    max-width: 750px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-h1, .tagline, .mission, .launch-info {
-    /* Styles for these are fine, no change needed */
-}
-
-/* === DROPDOWN MENU STYLES (PURE CSS HOVER) === */
 .dropdown {
     position: relative;
 }
@@ -125,7 +99,6 @@ h1, .tagline, .mission, .launch-info {
     left: 0;
     background-color: rgba(26, 36, 48, 0.8);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1001;
@@ -133,78 +106,115 @@ h1, .tagline, .mission, .launch-info {
     text-align: left;
 }
 
-    .dropdown-content a {
-        color: #ffffff;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-        .dropdown-content a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-/* This is the hover logic that makes the menu appear */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
-/* === MOBILE RESPONSIVE STYLES === */
-@media (max-width: 768px) {
-
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 15px;
-    }
-
-    nav {
-        width: 100%;
-        overflow-x: auto;
-    }
-
-        nav ul {
-            flex-direction: row;
-            white-space: nowrap;
-            padding-bottom: 10px;
-        }
-
-    .container {
-        padding: 20px;
-        max-width: 90%;
-        margin-top: 180px;
-    }
-
-    /* This fixes the dropdown getting cut off on mobile */
-    .dropdown {
-        position: static;
-    }
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
-/* === FEATURES SECTION STYLES === */
 
+    .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+
+/* --- Wrapper for all SCROLLING content --- */
+/* This is a NEW element we need in the HTML */
+/* --- Wrapper for all SCROLLING content --- */
+.page-wrapper {
+    padding-top: 80px; /* Space for the fixed header */
+    padding-bottom: 100vh; /* <<< ADD THIS LINE for extra scroll space */
+}
+
+/* --- Hero Section (The first block) --- */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Fill the screen minus the header height */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 750px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ... h1, tagline, mission, etc. styles are fine ... */
+h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #a7c8e8;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.mission {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #dddddd;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 25px;
+}
+
+.launch-info {
+    margin-top: 30px;
+}
+
+    .launch-info h2 {
+        font-size: 1em;
+        color: #bbbbbb;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .launch-info .launch-date {
+        font-size: 2em;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+/* --- FEATURES SECTION --- */
 .features-section {
-    background-color: #ffffff; /* A clean white background for this section */
-    padding: 60px 20px;
-    color: #333; /* Dark text for readability */
+    background-color: #ffffff;
+    padding: 80px 20px;
+    color: #333;
 }
 
 .features-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; /* This creates the column layout */
-    justify-content: space-around; /* Spreads the columns out */
-    gap: 30px; /* Adds space between the columns */
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
 
 .feature-item {
-    flex-basis: 30%; /* Each column takes up roughly a third of the space */
+    flex-basis: 30%;
     text-align: center;
 }
 
 .feature-icon {
-    font-size: 3em; /* Makes the icon large */
-    color: #3498db; /* A nice blue color for the icons */
+    font-size: 3em;
+    color: #3498db;
     margin-bottom: 20px;
 }
 
@@ -218,4 +228,86 @@ h1, .tagline, .mission, .launch-info {
     font-size: 1em;
     line-height: 1.6;
     color: #555;
+}
+
+
+/* --- SECURITY SPOTLIGHT SECTION --- */
+.spotlight-section {
+    background-color: #0d2c4e;
+    padding: 80px 20px;
+    color: #ffffff;
+}
+
+/* ... All other spotlight styles are fine ... */
+.spotlight-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.spotlight-image {
+    flex: 1;
+    height: 350px;
+    background-color: #1a2430;
+    background-image: url('images/security.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.spotlight-text {
+    flex: 1;
+    text-align: left;
+}
+
+    .spotlight-text h2 {
+        font-size: 2.5em;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .spotlight-text p {
+        font-size: 1.1em;
+        line-height: 1.7;
+        color: #dddddd;
+        margin-bottom: 20px;
+    }
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+
+/* --- FOOTER SECTION --- */
+.site-footer-bottom {
+    background-color: #1a2430;
+    color: #a7c8e8;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    .features-container, .spotlight-container {
+        flex-direction: column;
+    }
+
+    .spotlight-text {
+        text-align: center;
+    }
+    /* ... All your other mobile styles are fine ... */
 }
