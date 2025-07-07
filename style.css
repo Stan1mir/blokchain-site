@@ -309,5 +309,28 @@ h1 {
     .spotlight-text {
         text-align: center;
     }
-    /* ... All your other mobile styles are fine ... */
+
+    /* --- NEW STYLES FOR MOBILE NAVIGATION --- */
+
+    /* 1. Target the main navigation container */
+    .site-header nav {
+        overflow-x: auto; /* This is the key: enables horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS devices */
+        scrollbar-width: none; /* Hides the scrollbar on Firefox */
+    }
+
+        /* 2. Hide the scrollbar on Chrome, Safari, and Opera */
+        .site-header nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 3. Prevent the menu items from shrinking */
+        .site-header nav ul li a {
+            white-space: nowrap; /* Ensures text like "Understand Blockchain" doesn't wrap to a new line */
+        }
+
+    /* 4. Ensure the container has a clear boundary */
+    .nav-container {
+        flex-wrap: nowrap; /* Prevents the logo and nav from stacking vertically */
+    }
 }
