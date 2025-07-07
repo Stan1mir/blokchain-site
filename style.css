@@ -310,27 +310,43 @@ h1 {
         text-align: center;
     }
 
-    /* --- NEW STYLES FOR MOBILE NAVIGATION --- */
+    /* === NEW & CORRECTED MOBILE NAVIGATION STYLES === */
 
-    /* 1. Target the main navigation container */
-    .site-header nav {
-        overflow-x: auto; /* This is the key: enables horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS devices */
-        scrollbar-width: none; /* Hides the scrollbar on Firefox */
-    }
-
-        /* 2. Hide the scrollbar on Chrome, Safari, and Opera */
-        .site-header nav::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* 3. Prevent the menu items from shrinking */
-        .site-header nav ul li a {
-            white-space: nowrap; /* Ensures text like "Understand Blockchain" doesn't wrap to a new line */
-        }
-
-    /* 4. Ensure the container has a clear boundary */
+    /* 1. Make the nav container fill the width */
     .nav-container {
-        flex-wrap: nowrap; /* Prevents the logo and nav from stacking vertically */
+        padding: 0 15px; /* Adjust padding for mobile */
     }
+
+        .nav-container nav {
+            width: 100%;
+        }
+
+        /* 2. Apply the horizontal scroll to the <ul> itself */
+        .nav-container ul {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            scrollbar-width: none; /* Hide scrollbar on Firefox */
+
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap; /* CRITICAL: Prevent items from wrapping to a new line */
+            justify-content: flex-start; /* Align items to the start */
+        }
+
+            /* 3. Hide scrollbar for Chrome/Safari */
+            .nav-container ul::-webkit-scrollbar {
+                display: none;
+            }
+
+        /* 4. Style the logo specifically for the mobile menu */
+        .nav-container .logo {
+            font-size: 1.2em; /* Slightly smaller logo on mobile */
+            padding: 15px 0;
+            margin-right: 20px; /* Give it some space from the next item */
+        }
+
+        /* 5. Ensure all other menu items don't wrap their text */
+        .nav-container ul li a {
+            white-space: nowrap;
+        }
 }
