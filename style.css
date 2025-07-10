@@ -299,7 +299,6 @@ h1 {
     padding: 20px;
 }
 
-
 /* --- MOBILE RESPONSIVE STYLES --- */
 @media (max-width: 768px) {
     .features-container, .spotlight-container {
@@ -310,42 +309,37 @@ h1 {
         text-align: center;
     }
 
-    /* === NEW & CORRECTED MOBILE NAVIGATION STYLES === */
+    /* === CORRECTED MOBILE NAVIGATION STYLES (LOGO LAST) === */
 
-    /* 1. Make the nav container fill the width */
     .nav-container {
-        padding: 0 15px; /* Adjust padding for mobile */
+        padding: 0 15px;
     }
 
         .nav-container nav {
             width: 100%;
         }
 
-        /* 2. Apply the horizontal scroll to the <ul> itself */
         .nav-container ul {
-            overflow-x: auto; /* Enable horizontal scrolling */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-            scrollbar-width: none; /* Hide scrollbar on Firefox */
-
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
             display: flex;
             align-items: center;
-            flex-wrap: nowrap; /* CRITICAL: Prevent items from wrapping to a new line */
-            justify-content: flex-start; /* Align items to the start */
+            flex-wrap: nowrap;
+            justify-content: flex-start;
         }
 
-            /* 3. Hide scrollbar for Chrome/Safari */
             .nav-container ul::-webkit-scrollbar {
                 display: none;
             }
 
-        /* 4. Style the logo specifically for the mobile menu */
         .nav-container .logo {
-            font-size: 1.2em; /* Slightly smaller logo on mobile */
+            font-size: 1.2em;
             padding: 15px 0;
-            margin-right: 20px; /* Give it some space from the next item */
+            /* ===== CSS CHANGE IS HERE ===== */
+            margin-left: 20px; /* Changed from margin-right */
         }
 
-        /* 5. Ensure all other menu items don't wrap their text */
         .nav-container ul li a {
             white-space: nowrap;
         }
