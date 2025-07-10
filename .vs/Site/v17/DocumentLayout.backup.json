@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -40,18 +40,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-06-26T18:27:36.075Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-02T20:37:16.666Z"
             },
             {
               "$type": "Document",
@@ -73,10 +61,22 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAADAAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAYwH4AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-06-26T18:26:59.08Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T20:37:16.666Z"
             }
           ]
         }
