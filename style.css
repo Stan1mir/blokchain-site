@@ -118,7 +118,7 @@ nav ul {
 }
 
     .dropdown-content a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: #2980b9;
     }
 
 
@@ -126,8 +126,8 @@ nav ul {
 /* This is a NEW element we need in the HTML */
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
-    padding-top: 80px; /* Space for the fixed header */
-    padding-bottom: 100vh; /* <<< ADD THIS LINE for extra scroll space */
+    padding-top: 5px; /* Space for the fixed header */
+    padding-bottom: 35vh; /* <<< ADD THIS LINE for extra scroll space */
 }
 
 /* --- Hero Section (The first block) --- */
@@ -135,7 +135,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* Fill the screen minus the header height */
+    min-height: calc(70vh - 110px); /* Fill the screen minus the header height */
     color: #ffffff;
     text-align: center;
     padding: 20px;
@@ -143,11 +143,11 @@ nav ul {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px;
     border-radius: 10px;
     max-width: 750px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 /* ... h1, tagline, mission, etc. styles are fine ... */
@@ -161,7 +161,7 @@ h1 {
     font-size: 1.2em;
     color: #a7c8e8;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
 }
 
 .mission {
@@ -208,12 +208,12 @@ h1 {
 }
 
 .feature-item {
-    flex-basis: 30%;
+    flex-basis: 60%;
     text-align: center;
 }
 
 .feature-icon {
-    font-size: 3em;
+    font-size: 2em;
     color: #3498db;
     margin-bottom: 20px;
 }
@@ -234,13 +234,13 @@ h1 {
 /* --- SECURITY SPOTLIGHT SECTION --- */
 .spotlight-section {
     background-color: #0d2c4e;
-    padding: 100px 20px;
+    padding: 95px 18px;
     color: #ffffff;
 }
 
 /* ... All other spotlight styles are fine ... */
 .spotlight-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -279,7 +279,7 @@ h1 {
     display: inline-block;
     background-color: #3498db;
     color: #ffffff;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -300,7 +300,7 @@ h1 {
 }
 
 /* --- MOBILE RESPONSIVE STYLES --- */
-@media (max-width: 768px) {
+@media (max-width: 750px) {
     .features-container, .spotlight-container {
         flex-direction: column;
     }
@@ -335,7 +335,7 @@ h1 {
 
         .nav-container .logo {
             font-size: 1.2em;
-            padding: 15px 0;
+            padding: 10px 0;
             /* ===== CSS CHANGE IS HERE ===== */
             margin-left: 20px; /* Changed from margin-right */
         }
@@ -343,4 +343,69 @@ h1 {
         .nav-container ul li a {
             white-space: nowrap;
         }
+}
+/* --- URL Checker Section Styles --- */
+.url-checker-container {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+    .url-checker-container h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+.checker-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#url-to-check {
+    flex-grow: 1;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#check-url-btn {
+    padding: 5px 25px;
+    border: none;
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #check-url-btn:hover {
+        background-color: #2980b9;
+    }
+
+#checker-result {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 5px;
+    min-height: 25px;
+}
+/* Styles for different result states */
+.result-safe {
+    color: #2ecc71;
+}
+
+.result-danger {
+    color: #e74c3c;
+}
+
+.result-info {
+    color: #f39c12;
 }
