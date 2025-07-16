@@ -24,9 +24,9 @@ body {
 /* --- HEADER (Navigation Bar) --- */
 .site-header {
     background-color: rgba(26, 36, 48, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
-    position: fixed;
+    position: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -39,9 +39,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 10px 20px;
     flex-direction: row-reverse;
 }
 
@@ -135,41 +135,41 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(70vh - 110px); /* Fill the screen minus the header height */
+    min-height: calc(60vh - 100px); /* Fill the screen minus the header height */
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 58px;
     box-sizing: border-box;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
     border-radius: 10px;
-    max-width: 750px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    max-width: 695px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* ... h1, tagline, mission, etc. styles are fine ... */
 h1 {
-    font-size: 3em;
+    font-size: 2.2em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.8em;
     color: #a7c8e8;
-    margin-top: 5px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .mission {
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.1;
     color: #dddddd;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .launch-info {
