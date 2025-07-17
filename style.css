@@ -409,3 +409,94 @@ h1 {
 .result-info {
     color: #f39c12;
 }
+/* --- STYLES FOR NEW CONTENT PAGES --- */
+
+.content-page-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    color: #333;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+    .content-container h1 {
+        font-size: 2.8em;
+        color: #0d2c4e;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .content-container h2 {
+        font-size: 2em;
+        color: #0d2c4e;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .content-container p {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+.intro-paragraph {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 60px 0;
+}
+
+.content-features {
+    padding-top: 30px;
+}
+
+.styled-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    .styled-list li {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #555;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+        .styled-list li::before {
+            content: '✔'; /* Checkmark symbol */
+            color: #2ecc71; /* Green checkmark */
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+.concluding-paragraph {
+    text-align: center;
+}
+
+/* Center the button at the bottom */
+.content-container .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
