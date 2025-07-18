@@ -106,8 +106,16 @@ nav ul {
     text-align: left;
 }
 
-.dropdown:hover .dropdown-content {
+/* Show dropdown on hover OR if it has been clicked open */
+.dropdown:hover .dropdown-content,
+.dropdown.open-dropdown .dropdown-content {
     display: block;
+}
+
+/* NEW style for the specific active link inside the dropdown */
+.dropdown-content a.active-link {
+    color: #a7c8e8; /* A lighter, highlighted blue color */
+    font-weight: bold;
 }
 
 .dropdown-content a {
@@ -500,3 +508,58 @@ h1 {
     width: fit-content;
     margin: 40px auto 0 auto;
 }
+/* --- Styles for Two-Column Intro with Image --- */
+.intro-container {
+    display: flex;
+    align-items: center; /* Vertically align items in the middle */
+    gap: 40px; /* Space between text and image */
+    margin-top: 40px;
+}
+
+.intro-text {
+    flex: 1; /* Text takes up half the space */
+}
+
+    .intro-text p {
+        font-size: 1.1em;
+        line-height: 1.8;
+    }
+
+.intro-image {
+    flex: 1; /* Image takes up half the space */
+    text-align: center;
+}
+
+    .intro-image img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .intro-image figcaption {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+    }
+/* --- Style for Image Explanation Text --- */
+.image-explanation {
+    margin-top: 40px; /* Adds space after the intro columns */
+    padding: 25px;
+    background-color: #f8f9fa; /* A very light grey to set it apart */
+    border-left: 5px solid #3498db; /* A blue left border, like a blockquote */
+}
+
+    .image-explanation p {
+        font-size: 1.05em;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 0; /* Remove default bottom margin */
+    }
+
+    .image-explanation .summary-statement {
+        margin-top: 15px; /* Add space between the paragraphs */
+        font-style: normal; /* Override the italic style for emphasis */
+        font-size: 1.1em;
+    }

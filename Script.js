@@ -60,3 +60,57 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
+// --- SCRIPT FOR ACTIVE AND CLICKABLE DROPDOWN MENUS ---
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Part 1: Highlight the link for the current page ---
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (currentPage !== 'index.html') {
+        // Find the link that points to the current page
+        const activeLink = document.querySelector(`.dropdown-content a[href="${currentPage}"]`);
+
+        // If we found it, add the 'active-link' class to it
+        if (activeLink) {
+            activeLink.classList.add('active-link');
+        }
+    }
+
+    // --- Part 2: Handle clicks on any dropdown menu ---
+    const allDropdowns = document.querySelectorAll('.dropdown');
+
+    allDropdowns.forEach(dropdown => {
+        const dropBtn = dropdown.querySelector('.drop-btn');
+        if (dropBtn) {
+            dropBtn.addEventListener('click', (event) => {
+                // Prevent the link from navigating away
+                event.preventDefault();
+
+                // Check if the clicked dropdown is already open
+                const isAlreadyOpen = dropdown.classList.contains('open-dropdown');
+
+                // First, close all other dropdowns
+                allDropdowns.forEach(d => {
+                    d.classList.remove('open-dropdown');
+                });
+
+                // If it wasn't already open, open it now.
+                if (!isAlreadyOpen) {
+                    dropdown.classList.add('open-dropdown');
+                }
+                // If you click an already open menu, it will now close.
+            });
+        }
+    });
+
+    // --- Part 3 (Bonus): Close dropdowns if you click anywhere else on the page ---
+    window.addEventListener('click', (event) => {
+        // Check if the click was outside of any dropdown menu
+        if (!event.target.closest('.dropdown')) {
+            // If it was, close all open dropdowns
+            allDropdowns.forEach(d => {
+                d.classList.remove('open-dropdown');
+            });
+        }
+    });
+});
