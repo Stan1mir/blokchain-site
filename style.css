@@ -13,6 +13,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* This is the key */
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -24,13 +25,9 @@ body {
 /* --- HEADER (Navigation Bar) --- */
 .site-header {
     background-color: rgba(26, 36, 48, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    position: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    /* The position: fixed and related properties have been removed */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -136,8 +133,8 @@ nav ul {
 /* This is a NEW element we need in the HTML */
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
-    padding-top: 5px; /* Space for the fixed header */
-    padding-bottom: 35vh; /* <<< ADD THIS LINE for extra scroll space */
+    /* padding-top is no longer needed */
+    padding-bottom: 100vh;
 }
 
 /* --- Hero Section (The first block) --- */
@@ -422,9 +419,13 @@ h1 {
 /* --- STYLES FOR NEW CONTENT PAGES --- */
 
 .content-page-section {
-    background-color: #ffffff;
-    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.88); /* White with 85% opacity */
+    backdrop-filter: blur(0x); /* The frosted glass blur effect */
+    -webkit-backdrop-filter: blur(1px); /* For Safari browser support */
+    padding: 100px 20px;
+    padding-top: 30px;
     color: #333;
+    margin-top: 150px;
 }
 
 .content-container {
@@ -434,11 +435,11 @@ h1 {
 }
 
     .content-container h1 {
-        font-size: 2.8em;
-        color: #0d2c4e;
+        font-size: 2.5em;
+        color: #000000;
         text-align: center;
         margin-bottom: 20px;
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
     .content-container h2 {
@@ -453,7 +454,7 @@ h1 {
     .content-container p {
         font-size: 1.1em;
         line-height: 1.8;
-        color: #555;
+        color: #000000;
         margin-bottom: 20px;
     }
 
