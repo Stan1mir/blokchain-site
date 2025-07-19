@@ -112,10 +112,12 @@ nav ul {
     display: block;
 }
 
-/* NEW style for the specific active link inside the dropdown */
+/* Style for the active link: add a background color */
 .dropdown-content a.active-link {
-    color: #a7c8e8; /* A lighter, highlighted blue color */
+    color: #ffffff; /* Make the text white for high contrast */
     font-weight: bold;
+    background-color: #3498db; /* The primary blue color from your site */
+
 }
 
 .dropdown-content a {
@@ -562,4 +564,27 @@ h1 {
         margin-top: 15px; /* Add space between the paragraphs */
         font-style: normal; /* Override the italic style for emphasis */
         font-size: 1.1em;
+    }
+/* --- Style for Quote Blocks --- */
+.quote-block {
+    margin: 40px 0; /* Adds space above and below */
+    padding: 25px;
+    background-color: #f8f9fa; /* A very light grey background */
+    border-left: 5px solid #3498db; /* A blue left border for emphasis */
+}
+
+    .quote-block p {
+        font-size: 1.05em;
+        font-style: italic;
+        color: #444;
+        margin: 0;
+    }
+
+    .quote-block .quote-source {
+        display: block; /* Puts it on its own line */
+        text-align: right; /* Aligns it to the right */
+        font-style: normal;
+        font-size: 1em;
+        color: #555;
+        margin-top: 15px;
     }
