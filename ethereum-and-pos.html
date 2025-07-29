@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum & Proof of Stake - blokchain.co.uk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image-container"></div>
+    <header class="site-header">
+        <div class="nav-container">
+            <!-- This is the MASTER NAVIGATION block -->
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">Understand Blockchain ▼</a>
+                        <div class="dropdown-content">
+                            <a href="what-is-blockchain.html">Intro</a>
+                            <a href="blockchain-evolution.html">Blockchain 2.0 & Smart Contracts</a>
+                            <a href="real-world-uses.html">Real-World Uses</a>
+                            <!-- You might add the new link here in a future step -->
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">What is Cryptography ▼</a>
+                        <div class="dropdown-content">
+                            <a href="#">History</a>
+                            <a href="ethereum-and-pos.html">Ethereum & Proof of Stake</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">Security ▼</a>
+                        <div class="dropdown-content">
+                            <a href="#">"Not your keys not your Crypto"</a>
+                            <a href="#">Protect Yourself in WEB3</a>
+                            <a href="#">General Cybersecurity</a>
+                        </div>
+                    </li>
+                    <li class="cta-button"><a href="https://github.com/Stan1mir/blokchain-site/raw/main/CryptoVerifierExtension.zip" download>EXTENSION</a></li>
+                    <li><a href="index.html" class="logo">blokchain.co.uk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <section class="content-page-section">
+            <div class="content-container">
+
+                <h1> Understanding Ethereum & Proof of Stake</h1>
+
+                <p>Ethereum was conceived as a revolutionary step forward in blockchain technology. In a whitepaper released in 2013, its creator, Vitalik Buterin, described a platform that would go far beyond the financial applications of Bitcoin. Ethereum's proposed innovation was its ability to execute <strong>smart contracts</strong>—self-automated computer programs that operate without human intervention. After a successful crowdfunding campaign, the network officially went live in 2015, marking the beginning of an open-source platform that has become a leading blockchain for innovation and development.</p>
+
+                <hr class="content-divider">
+
+                <h2>The Engine of Modern Blockchains: Proof of Stake (PoS)</h2>
+                <p>To secure its network and validate transactions, Ethereum (and many other modern blockchains) uses a consensus mechanism called <strong>Proof of Stake (PoS)</strong>. This is a more energy-efficient alternative to Bitcoin's Proof of Work system. After moving to PoS , Ethereum energy consumtion dropped with 99%. This upgrade has it's own limitations too. We will explain more about this techonogies in the next pages.   </p>
+
+                <h3>How Does Proof of Stake Work?</h3>
+                <p>The core idea behind PoS is that those with a more significant investment in the network are more likely to act honestly. In PoS, network participants, called <strong>validators</strong>, "stake" their own cryptocurrency as collateral. By locking up their assets, they earn the right to validate new transactions and add them to the blockchain. In return for their honest work, they receive staking rewards. However, if they act maliciously or fail to do their job correctly, their staked assets can be automatically penalized or destroyed in a process known as <strong>"slashing"</strong>.</p>
+
+                <hr class="content-divider">
+
+                <h2>How You Can Participate: An Intro to Staking Pools</h2>
+                <p>For most users, becoming a full validator is difficult, as it can require a large amount of cryptocurrency (for example, 32 ETH for Ethereum) and technical expertise. This is where <strong>staking pools</strong> come in.</p>
+                <p>Services like <strong>Lido</strong> and <strong>Stakefish</strong> offer a democratized approach. They allow many different users to pool their smaller amounts of crypto together. This collective pool is then used to run a validator node, and the rewards are distributed proportionally to everyone who contributed. This not only lowers the financial barrier for individual investors but also helps to further decentralize and secure the network.</p>
+
+                <hr class="content-divider">
+
+                <h2>The Security Challenges of Proof of Stake</h2>
+                <p>While PoS is a powerful system, it is not without its own unique security challenges. Two key challenges are:</p>
+                <ul class="styled-list">
+                    <li><strong>The "Nothing at Stake" Problem:</strong> A theoretical issue where a validator could validate multiple chains at no extra cost, causing confusion. Modern systems use heavy "slashing" penalties to make any dishonest behavior extremely costly.</li>
+                    <li><strong>Long-Range Attacks:</strong> An attempt by an attacker to use old, discarded private keys to create a secret, alternative history of the blockchain. Networks prevent this with safeguards like <strong>checkpointing</strong> (which "locks in" the history) and community-driven social consensus.</li>
+                </ul>
+
+            </div>
+        </section>
+        <footer class="site-footer-bottom">
+            <p>© 2025 blokchain.co.uk - All Rights Reserved</p>
+            <p>Your Smart Guide to Crypto Security</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
