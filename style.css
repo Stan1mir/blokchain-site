@@ -24,10 +24,16 @@ body {
 
 /* --- HEADER (Navigation Bar) --- */
 .site-header {
+   
+
     background-color: rgba(26, 36, 48, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* The position: fixed and related properties have been removed */
+    position: fixed; /* Fixes the header to the viewport */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it span the full width */
+    z-index: 1000; /* Ensures it stays on top of other content */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -419,13 +425,12 @@ h1 {
 /* --- STYLES FOR NEW CONTENT PAGES --- */
 
 .content-page-section {
-    background-color: rgba(255, 255, 255, 0.88); /* White with 85% opacity */
-    backdrop-filter: blur(0x); /* The frosted glass blur effect */
-    -webkit-backdrop-filter: blur(1px); /* For Safari browser support */
-    padding: 100px 20px;
-    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 80px 20px;
     color: #333;
-    margin-top: 150px;
+    /* The margin-top has been removed */
 }
 
 .content-container {
@@ -440,6 +445,7 @@ h1 {
         text-align: center;
         margin-bottom: 20px;
         line-height: 1.1;
+        margin-top: 0;
     }
 
     .content-container h2 {
@@ -625,3 +631,24 @@ h1 {
     color: #e67e22; /* Orange for the previous hash */
     font-family: 'Courier New', Courier, monospace;
 }
+/* --- Styles for the Page Title Overlay --- */
+.page-title-overlay {
+    padding-top: 90px;
+    /* The text-align property has been removed to allow for alignment within a container */
+    padding-bottom: -10px;
+    /* We add a max-width and margin to control the position */
+    max-width: 1250px; /* Aligns with your main nav container */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px; /* Adds some space from the left edge */
+    padding-right: 1150px;
+}
+
+    .page-title-overlay h2 {
+        font-size: 3.5em; /* Make the text large */
+        color: #ffffff; /* Make the text pure white */
+        font-weight: bold;
+        /* This creates the text shadow you wanted */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        margin: 0; /* Remove any default margins */
+    }
