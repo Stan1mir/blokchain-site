@@ -589,3 +589,39 @@ h1 {
         color: #555;
         margin-top: 15px;
     }
+/* --- Styles for the Blockchain Demo Page --- */
+#blockchain-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blockchain-block {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+    .blockchain-block h3 {
+        margin-top: 0;
+        color: #0d2c4e;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
+
+.block-info {
+    margin-bottom: 8px;
+    word-wrap: break-word; /* Make sure long hashes wrap */
+}
+
+.hash-info {
+    color: #27ae60; /* Green for the valid hash */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.prev-hash-info {
+    color: #e67e22; /* Orange for the previous hash */
+    font-family: 'Courier New', Courier, monospace;
+}

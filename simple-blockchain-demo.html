@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blockchain Demo - blokchain.co.uk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image-container"></div>
+    <header class="site-header"></header> <!-- We will paste the Master Nav here later -->
+
+    <div class="page-wrapper">
+        <section class="content-page-section">
+            <div class="content-container">
+
+                <h1>Live Blockchain Demo</h1>
+                <p>This is a simplified, live demonstration of a Proof of Work blockchain, just like the one that powers Bitcoin. The code is running entirely in your browser. Click the button below to start "mining" new blocks and add them to the chain. Notice how each block contains the hash of the one before it, creating an unbreakable chain.</p>
+
+                <button id="start-mining-btn" class="btn-primary">Start Mining</button>
+
+                <hr class="content-divider">
+
+                <!-- The Blockchain will be displayed here -->
+                <div id="blockchain-container">
+                    <!-- Blocks will be added here by JavaScript -->
+                </div>
+
+            </div>
+        </section>
+        <footer class="site-footer-bottom">
+            <p>© 2025 blokchain.co.uk - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Link to our NEW JavaScript file for this demo -->
+    <script src="blockchain-demo.js"></script>
+    <!-- We also need our main script for the dropdowns -->
+    <script src="script.js"></script>
+</body>
+</html>
