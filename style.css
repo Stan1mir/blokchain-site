@@ -139,7 +139,7 @@ nav ul {
 /* This is a NEW element we need in the HTML */
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
-    /* padding-top is no longer needed */
+    padding-top: 10px; /* CRUCIAL: Makes space for the fixed header */
     padding-bottom: 100vh;
 }
 

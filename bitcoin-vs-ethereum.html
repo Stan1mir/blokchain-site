@@ -10,8 +10,8 @@
 <body>
     <div class="background-image-container"></div>
     <header class="site-header">
+        <!-- Your navigation code is correct and goes here -->
         <div class="nav-container">
-            <!-- === NEW MASTER NAVIGATION BLOCK === -->
             <nav>
                 <ul>
                     <li class="dropdown">
@@ -22,7 +22,6 @@
                             <a href="bitcoin-vs-ethereum.html">Bitcoin vs. Ethereum (PoW vs. PoS)</a>
                             <a href="ethereum-and-pos.html">Ethereum & PoS Deep Dive</a>
                             <a href="real-world-uses.html">Real-World Uses</a>
-
                             <a href="simple-blockchain-demo.html">Live Demo</a>
                         </div>
                     </li>
@@ -45,19 +44,24 @@
                     <li><a href="index.html" class="logo">blokchain.co.uk</a></li>
                 </ul>
             </nav>
-            <!-- === MASTER NAVIGATION BLOCK - END === -->
         </div>
     </header>
 
+    <!-- WRAPPER FOR ALL SCROLLING CONTENT -->
     <div class="page-wrapper">
+
+        <div class="page-title-overlay">
+            <h2>BTC Vs. ETH</h2>
+        </div>
+
         <section class="content-page-section">
             <div class="content-container">
 
-                <<h1>
-    Bitcoin vs. Ethereum
-    <br>
-    The Rock Star and The Innovator
-</h1>
+                <h1>
+                    Bitcoin vs. Ethereum
+                    <br>
+                    The Rock Star and The Innovator
+                </h1>
 
                 <p>Ethereum and Bitcoin are the A-list celebrities of the crypto world, but they play very different roles. Understanding their differences is key to understanding the entire blockchain universe. One is a store of value, the other is a world computer, and the technology they use to stay secure is fundamentally different.</p>
 
@@ -65,28 +69,32 @@
 
                 <h2>Bitcoin: The Strong, Silent Type (Proof of Work)</h2>
                 <p>Bitcoin is the original, the granddaddy of all cryptocurrencies. It’s like a classic rock band that paved the way for everyone else. Its main job is to be a secure, decentralized store of value. Think of it like digital gold. Bitcoin doesn't try to do a thousand different things; it does one thing, and it does it with incredible security.</p>
-                <p>This security comes from its consensus mechanism, **Proof of Work (PoW)**. In PoW, powerful computers called "miners" compete to solve complex mathematical puzzles. The first to solve the puzzle gets to add the next block of transactions to the chain and is rewarded with new Bitcoin. This process requires an immense amount of computational power, making the network incredibly difficult to attack.</p>
+                <p>This security comes from its consensus mechanism, <strong>Proof of Work (PoW)</strong>. In PoW, powerful computers called "miners" compete to solve complex mathematical puzzles. The first to solve the puzzle gets to add the next block of transactions to the chain and is rewarded with new Bitcoin. This process requires an immense amount of computational power, making the network incredibly difficult to attack.</p>
                 <div class="quote-block">
+                    <!-- Note: I moved the other quote here as it was missing from the Bitcoin section in your version -->
                     <p>"Bitcoin is like the strong, silent type at a party—doesn't talk much, just stands in the corner looking cool, and gets asked to take a selfie with everyone."</p>
                 </div>
 
                 <hr class="content-divider">
 
                 <h2>Ethereum: The Life of the Party (Proof of Stake)</h2>
-                <p>Ethereum, on the other hand, is the innovator. It saw the core idea of blockchain and asked, "What if we put a whole app store on this thing?" Ethereum isn't just about being digital gold; it's about **smart contracts**, **decentralized applications (dApps)**, and thousands of other things that Bitcoin was never designed for. If Bitcoin is the Mona Lisa, Ethereum is the Louvre—a place where you find everything from ancient sculptures to modern art.</p>
-                <p>To power this vast ecosystem, Ethereum upgraded from Proof of Work to a more modern and efficient system: **Proof of Stake (PoS)**. Instead of miners competing with raw power, "validators" lock up their own ETH as collateral to prove their honesty. This achieves the same level of security but with a tiny fraction of the energy consumption.</p>
-
+                <p>Ethereum, on the other hand, is the innovator. It saw the core idea of blockchain and asked, "What if we put a whole app store on this thing?" Ethereum isn't just about being digital gold; it's about <strong>smart contracts</strong>, <strong>decentralized applications (dApps)</strong>, and thousands of other things that Bitcoin was never designed for. If Bitcoin is the Mona Lisa, Ethereum is the Louvre—a place where you find everything from ancient sculptures to modern art.</p>
+                <p>To power this vast ecosystem, Ethereum upgraded from Proof of Work to a more modern and efficient system: <strong>Proof of Stake (PoS)</strong>. Instead of miners competing with raw power, "validators" lock up their own ETH as collateral to prove their honesty. This achieves the same level of security but with a tiny fraction of the energy consumption.</p>
                 <div class="quote-block">
                     <p>"Ethereum's move from proof of work (PoW) to proof of stake (PoS) is like trading in a diesel-powered monster truck for a Tesla: still plenty of power but now with less noise and environmental impact."</p>
                 </div>
 
-            </div>
+            </div> <!-- All content is now correctly inside this closing div -->
+
         </section>
+
         <footer class="site-footer-bottom">
             <p>© 2025 blokchain.co.uk - All Rights Reserved</p>
             <p>Your Smart Guide to Crypto Security</p>
         </footer>
-    </div>
+
+         </div> <!-- WRAPPER ENDS HERE -->
+
     <script src="script.js"></script>
 </body>
 </html>
