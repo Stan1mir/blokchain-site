@@ -652,3 +652,51 @@ h1 {
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         margin: 0; /* Remove any default margins */
     }
+/* --- FINAL DEFINITIVE STYLES FOR SUB-DROPDOWN MENUS --- */
+
+/* Make all direct children of the dropdown content behave the same */
+.dropdown-content > a,
+.dropdown-content > .sub-dropdown {
+    display: block; /* Ensures they stack correctly */
+}
+
+/* The list item that holds the sub-menu */
+.sub-dropdown {
+    position: relative; /* This is the anchor for the sub-menu */
+}
+
+/* The actual sub-menu panel */
+.sub-menu {
+    display: none; /* Hide it by default */
+    position: absolute; /* Position it relative to its parent li */
+    left: 100%; /* Move it all the way to the right of the parent */
+    top: 0; /* Align its top with the parent's top */
+    margin-top: -1px; /* A tiny adjustment to align the borders */
+    /* Inherit the frosted glass style */
+    background-color: rgba(26, 36, 48, 0.8);
+    backdrop-filter: blur(10px);
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 0 5px 5px 0;
+}
+
+/* When the user hovers over the parent li, show the sub-menu */
+.sub-dropdown:hover > .sub-menu {
+    display: block;
+}
+
+/* Style the trigger link itself */
+.sub-dropdown > .drop-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    /* Add a hover effect for the trigger link */
+    .sub-dropdown > .drop-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
