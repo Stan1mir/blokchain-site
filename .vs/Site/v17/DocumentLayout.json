@@ -78,7 +78,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 277,
+      "VerticalTabListWidth": 243,
       "DocumentGroups": [
         {
           "DockedWidth": 233,
@@ -142,8 +142,7 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAGwAAAAAAAAAAAAwwIoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-26T18:26:59.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T18:26:59.08Z"
             },
             {
               "$type": "Document",
@@ -179,8 +178,7 @@
               "RelativeToolTip": "style.css",
               "ViewState": "AgIAAMUCAAAAAAAAAAAwwOMCAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-26T18:27:36.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T18:27:36.075Z"
             },
             {
               "$type": "Document",
@@ -192,8 +190,7 @@
               "RelativeToolTip": "blockchain-in-education.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T21:09:42.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T21:09:42.809Z"
             },
             {
               "$type": "Document",
@@ -203,7 +200,7 @@
               "RelativeDocumentMoniker": "digital-self-security.html",
               "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\digital-self-security.html",
               "RelativeToolTip": "digital-self-security.html",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAwwHMAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwHQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-30T01:29:07.165Z",
               "EditorCaption": ""
@@ -266,8 +263,7 @@
               "RelativeToolTip": "blockchain-in-agriculture.html",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAFMAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T12:42:57.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:42:57.533Z"
             },
             {
               "$type": "Document",
