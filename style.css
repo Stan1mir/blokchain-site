@@ -654,25 +654,24 @@ h1 {
     }
 /* --- FINAL DEFINITIVE STYLES FOR SUB-DROPDOWN MENUS --- */
 
-/* Make all direct children of the dropdown content behave the same */
+/* This rule makes all direct children stack properly. It is correct. */
 .dropdown-content > a,
 .dropdown-content > .sub-dropdown {
-    display: block; /* Ensures they stack correctly */
+    display: block;
 }
 
-/* The list item that holds the sub-menu */
+/* The list item that holds the sub-menu. This is correct. */
 .sub-dropdown {
-    position: relative; /* This is the anchor for the sub-menu */
+    position: relative;
 }
 
-/* The actual sub-menu panel */
+/* The actual sub-menu panel. This is correct. */
 .sub-menu {
-    display: none; /* Hide it by default */
-    position: absolute; /* Position it relative to its parent li */
-    left: 100%; /* Move it all the way to the right of the parent */
-    top: 0; /* Align its top with the parent's top */
-    margin-top: -1px; /* A tiny adjustment to align the borders */
-    /* Inherit the frosted glass style */
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: -1px;
     background-color: rgba(26, 36, 48, 0.8);
     backdrop-filter: blur(10px);
     min-width: 240px;
@@ -680,12 +679,18 @@ h1 {
     border-radius: 0 5px 5px 0;
 }
 
-/* When the user hovers over the parent li, show the sub-menu */
+/* 
+   ==================================================================
+   THIS IS THE CRITICAL FIX
+   ==================================================================
+   This rule says: ONLY when you hover over the ".sub-dropdown" ITSELF,
+   then find the ".sub-menu" inside it and show it.
+*/
 .sub-dropdown:hover > .sub-menu {
     display: block;
 }
 
-/* Style the trigger link itself */
+/* Style the trigger link itself. This is correct. */
 .sub-dropdown > .drop-btn {
     display: block;
     width: 100%;
@@ -696,7 +701,40 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-    /* Add a hover effect for the trigger link */
+    /* Add a hover effect for the trigger link. This is correct. */
     .sub-dropdown > .drop-btn:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
+.references-section h3 {
+    font-size: 1.3em;
+    color: #0d2c4e;
+    margin-bottom: 20px;
+}
+
+.references-section ol {
+    padding-left: 20px;
+}
+
+.references-section li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #09091fd5;
+}
+.references-callout {
+    margin-top: 60px;
+    padding: 25px;
+    background-color: #e9ecef; /* A slightly darker grey */
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+/* Style for links inside the new references section */
+.references-section li a {
+    text-decoration: none; /* Removes the default blue underline */
+    color: inherit; /* Makes the link inherit the dark text color */
+}
+
+    .references-section li a:hover {
+        text-decoration: underline; /* Adds an underline ONLY when you hover over it */
+        color: #3498db; /* Changes the color to your site's blue on hover */
+    }
+    
