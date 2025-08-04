@@ -767,3 +767,16 @@ h1 {
 .result-card .data-value {
     color: #3498db; /* Highlights the final result in blue */
 }
+/* --- Styles for Embedded Video --- */
+.spotlight-video {
+    flex: 1;
+    aspect-ratio: 16 / 9; /* This maintains the 16:9 video shape */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the video corners are rounded */
+}
+
+    .spotlight-video iframe {
+        width: 100%;
+        height: 100%;
+        border: none; /* Removes the default iframe border */
+    }
