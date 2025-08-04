@@ -117,7 +117,7 @@ nav ul {
 
 /* Style for the active link: add a background color */
 .dropdown-content a.active-link {
-    color: #ffffff; /* Make the text white for high contrast */
+    color: #989de8; /* Make the text white for high contrast */
     font-weight: bold;
     background-color: #3498db; /* The primary blue color from your site */
 
@@ -125,13 +125,13 @@ nav ul {
 
 .dropdown-content a {
     color: #ffffff;
-    padding: 12px 16px;
+    padding: 15px 16px;
     text-decoration: none;
     display: block;
 }
 
     .dropdown-content a:hover {
-        background-color: #2980b9;
+        background-color: #2f29b4;
     }
 
 
@@ -139,8 +139,10 @@ nav ul {
 /* This is a NEW element we need in the HTML */
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
+    border-radius: 15px;
+    padding: 25px;
     padding-top: 10px; /* CRUCIAL: Makes space for the fixed header */
-    padding-bottom: 100vh;
+    padding-bottom: 25vh;
 }
 
 /* --- Hero Section (The first block) --- */
@@ -151,16 +153,20 @@ nav ul {
     min-height: calc(60vh - 100px); /* Fill the screen minus the header height */
     color: #ffffff;
     text-align: center;
-    padding: 58px;
+    padding: 75px;
     box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 0vh;
 }
 
 .container {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 695px;
+    padding: 100px;
+    border-radius: 15px;
+    max-width: 825px;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 20px;
+    padding-bottom: 1vh;
 }
 
 /* ... h1, tagline, mission, etc. styles are fine ... */
@@ -168,13 +174,15 @@ h1 {
     font-size: 2.2em;
     margin: 0;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding-top: 0px;
+    padding-bottom: 0vh;
 }
 
 .tagline {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #a7c8e8;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 1px;
 }
 
 .mission {
@@ -182,34 +190,18 @@ h1 {
     line-height: 1.1;
     color: #dddddd;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
-.launch-info {
-    margin-top: 30px;
-}
 
-    .launch-info h2 {
-        font-size: 1em;
-        color: #bbbbbb;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 5px;
-    }
-
-    .launch-info .launch-date {
-        font-size: 2em;
-        font-weight: bold;
-        color: #ffffff;
-        margin: 0;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    }
 
 /* --- FEATURES SECTION --- */
 .features-section {
     background-color: #ffffff;
-    padding: 80px 20px;
+    padding: 70px 5px;
     color: #333;
+    padding-top: 5px;
+    padding-bottom: 0vh;
 }
 
 .features-container {
