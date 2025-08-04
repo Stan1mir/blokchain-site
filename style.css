@@ -140,9 +140,13 @@ nav ul {
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
    
+    
+    /*=============================             SCROLING EFFECT ALL THE WAY TO THE TOP! ====
+       
+       HERE===*/
    
-    padding-top: 10px; /* CRUCIAL: Makes space for the fixed header */
-    padding-bottom: 25vh;
+    padding-top: 19px; /* CRUCIAL: Makes space for the fixed header */
+    padding-bottom: 95vh;
 }
 
 /* --- Hero Section (The first block) --- */
@@ -150,13 +154,13 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(60vh - 100px); /* Fill the screen minus the header height */
+    min-height: calc(60vh - 190px); /* Fill the screen minus the header height */
     color: #ffffff;
     text-align: center;
-    padding: 75px;
+    padding: 150px;
     box-sizing: border-box;
-    padding-top: 10px;
-    padding-bottom: 0vh;
+    padding-top: 100px;
+    padding-bottom: 1vh;
 }
 
 .container {
@@ -198,15 +202,15 @@ h1 {
 /* --- FEATURES SECTION --- */
 .features-section {
     background-color: #ffffff;
-    padding: 70px 5px;
+    padding: 500px 555px;
     color: #333;
-    padding-top: 5px;
-    padding-bottom: 0vh;
+    padding-top: 1px;
+    padding-bottom: 1vh;
 }
 
 .features-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1500px;
+    margin: 100 auto;
     display: flex;
     justify-content: space-around;
     gap: 30px;
@@ -301,7 +305,7 @@ h1 {
     background-color: #1a2430;
     color: #a7c8e8;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* --- MOBILE RESPONSIVE STYLES --- */
@@ -339,8 +343,8 @@ h1 {
             }
 
         .nav-container .logo {
-            font-size: 1.2em;
-            padding: 10px 0;
+            font-size: 1.5em;
+            padding: 100px 0;
             /* ===== CSS CHANGE IS HERE ===== */
             margin-left: 20px; /* Changed from margin-right */
         }
