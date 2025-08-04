@@ -139,8 +139,8 @@ nav ul {
 /* This is a NEW element we need in the HTML */
 /* --- Wrapper for all SCROLLING content --- */
 .page-wrapper {
-    border-radius: 15px;
-    padding: 25px;
+   
+   
     padding-top: 10px; /* CRUCIAL: Makes space for the fixed header */
     padding-bottom: 25vh;
 }
@@ -673,7 +673,7 @@ h1 {
 
 /* 
    ==================================================================
-   THIS IS THE CRITICAL FIX
+   CRITICAL FIX here
    ==================================================================
    This rule says: ONLY when you hover over the ".sub-dropdown" ITSELF,
    then find the ".sub-menu" inside it and show it.
@@ -729,4 +729,41 @@ h1 {
         text-decoration: underline; /* Adds an underline ONLY when you hover over it */
         color: #3498db; /* Changes the color to your site's blue on hover */
     }
-    
+/* --- Live Data Dashboard Styles --- */
+.live-data-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+    gap: 25px; /* Sets the space between the cards */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.data-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+    .data-card:hover {
+        transform: translateY(-5px); /* Adds a subtle lift effect on hover */
+    }
+
+.data-label {
+    font-size: 1em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.data-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0d2c4e;
+}
+
+.result-card .data-value {
+    color: #3498db; /* Highlights the final result in blue */
+}
