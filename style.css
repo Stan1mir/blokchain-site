@@ -117,7 +117,7 @@ nav ul {
 
 /* Style for the active link: add a background color */
 .dropdown-content a.active-link {
-    color: #989de8; /* Make the text white for high contrast */
+    color: #e2e3f0; /* Make the text white for high contrast */
     font-weight: bold;
     background-color: #3498db; /* The primary blue color from your site */
 
@@ -131,7 +131,7 @@ nav ul {
 }
 
     .dropdown-content a:hover {
-        background-color: #2f29b4;
+        background-color: #2f28b4bb;
     }
 
 
