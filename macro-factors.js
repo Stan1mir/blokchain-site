@@ -1,78 +1,96 @@
-// --- Live Macro Factors Dashboard Script (Simplified & Corrected) ---
+// --- Live Macro Factors Dashboard Script (100% Automatic Version) ---
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Your API Key
     const apiKey = 'da66b07e7fe0fe8655f25f956d365354';
+    const proxyUrl = 'https://api.allorigins.win/raw?url=';
 
-    // Get the HTML elements
     const interestRateEl = document.getElementById('interest-rate');
     const inflationRateEl = document.getElementById('inflation-rate');
     const gdpGrowthEl = document.getElementById('gdp-growth');
     const headwindEl = document.getElementById('economic-headwind');
 
-    // --- A single function to get the LIVE Interest Rate ---
-    async function getInterestRate() {
-        const seriesId = 'DGS10'; // The series for the 10-Year Treasury
-        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    // --- Function 1: Gets the LATEST single value (for Interest Rate) ---
+    async function getLatestValue(seriesId) {
         const apiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&api_key=${apiKey}&file_type=json&sort_order=desc&limit=5`;
-
         try {
             const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
-            if (!response.ok) throw new Error("Network error");
+            if (!response.ok) throw new Error(`Network error for ${seriesId}`);
+            const data = await response.json();
+            for (const obs of data.observations) {
+                if (obs.value !== '.') return parseFloat(obs.value);
+            }
+            throw new Error(`No valid data for ${seriesId}`);
+        } catch (error) {
+            console.error(`Error in getLatestValue for ${seriesId}:`, error);
+            return null;
+        }
+    }
+
+    // --- FUNCTION 2: Calculates Year-Over-Year % Change (for Inflation & GDP) ---
+    async function getYoYChange(seriesId, observationCount) {
+        // observationCount should be 13 for monthly data (CPI), 5 for quarterly data (GDP)
+        const apiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&api_key=${apiKey}&file_type=json&sort_order=desc&limit=${observationCount}`;
+        try {
+            const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
+            if (!response.ok) throw new Error(`Network error for ${seriesId}`);
             const data = await response.json();
 
-            // Smart loop to find the most recent valid number
-            for (const observation of data.observations) {
-                if (observation.value !== '.') {
-                    return parseFloat(observation.value);
-                }
-            }
-            throw new Error("No valid data point found");
+            if (data.observations.length < observationCount) throw new Error(`Not enough data for YoY on ${seriesId}`);
 
+            const currentValue = parseFloat(data.observations[0].value);
+            const oldValue = parseFloat(data.observations[observationCount - 1].value); // Value from 1 year ago
+
+            if (isNaN(currentValue) || isNaN(oldValue) || oldValue === 0) throw new Error(`Invalid data for YoY on ${seriesId}`);
+
+            const percentChange = ((currentValue - oldValue) / oldValue) * 100;
+            return percentChange;
         } catch (error) {
-            console.error('Error fetching interest rate:', error);
-            return null; // Return null if it fails
+            console.error(`Error in getYoYChange for ${seriesId}:`, error);
+            return null;
         }
     }
 
     // --- Main function to update the dashboard ---
     async function updateDashboard() {
-
-        // --- 1. GET THE LIVE DATA ---
         interestRateEl.textContent = 'Loading...';
-        const liveInterestRate = await getInterestRate();
-
         inflationRateEl.textContent = 'Loading...';
-        const liveInflationRate = await getInterestRate();
-
         gdpGrowthEl.textContent = 'Loading...';
-        const liveGdpGrowth = await getInterestRate();
+        headwindEl.textContent = 'Calculating...';
 
-        // --- 2. DEFINE THE MANUAL DATA ---
-        const manualInflationRate = 3.48; // You can change this number
-        const manualGdpGrowth = 3.10;     // You can change this number
+        const [liveInterestRate, liveInflationRate, liveGdpGrowth] = await Promise.all([
+            getLatestValue('DGS10'),       // Interest rate is a simple latest value
+            getYoYChange('CPIAUCSL', 13),   // Inflation is YoY % change of monthly data
+            getYoYChange('GDPC1', 5)        // GDP Growth is YoY % change of quarterly data
+        ]);
 
-        // Display the manual data immediately
-        inflationRateEl.textContent = `${manualInflationRate.toFixed(2)}%`;
-        gdpGrowthEl.textContent = `${manualGdpGrowth.toFixed(2)}%`;
+        let hasError = false;
 
-        // --- 3. CALCULATE AND DISPLAY EVERYTHING ---
+        // Display Interest Rate
         if (liveInterestRate !== null) {
-            // Success! We got the live data.
             interestRateEl.textContent = `${liveInterestRate.toFixed(2)}%`;
+        } else { interestRateEl.textContent = 'Data N/A'; hasError = true; }
 
-            const headwind = liveGdpGrowth + liveInterestRate - liveInflationRate;
-            headwindEl.textContent = `${headwind.toFixed(2)}%`;
-            headwindEl.style.color = headwind < 0 ? '#e74c3c' : '#2ecc71';
-        } else {
-            // The API call failed. Show an error.
-            interestRateEl.textContent = 'Data N/A';
+        // Display Inflation Rate
+        if (liveInflationRate !== null) {
+            inflationRateEl.textContent = `${liveInflationRate.toFixed(2)}%`;
+        } else { inflationRateEl.textContent = 'Data N/A'; hasError = true; }
+
+        // Display GDP Growth
+        if (liveGdpGrowth !== null) {
+            gdpGrowthEl.textContent = `${liveGdpGrowth.toFixed(2)}%`;
+        } else { gdpGrowthEl.textContent = 'Data N/A'; hasError = true; }
+
+        // Calculate and display the headwind
+        if (hasError) {
             headwindEl.textContent = 'Error';
             headwindEl.style.color = '#e74c3c';
+        } else {
+            const headwind = liveGdpGrowth - (liveInterestRate - liveInflationRate);
+            headwindEl.textContent = `${headwind.toFixed(2)}%`;
+            headwindEl.style.color = headwind < 0 ? '#e74c3c' : '#2ecc71';
         }
     }
 
-    // Run the function
     updateDashboard();
 });
