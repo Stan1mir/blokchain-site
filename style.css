@@ -37,6 +37,8 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
+
 /* ... All your other header, nav, logo, dropdown styles are fine ... */
 .nav-container {
     display: flex;
@@ -133,6 +135,29 @@ nav ul {
     .dropdown-content a:hover {
         background-color: #2f28b4bb;
     }
+/* --- Styles for the Extension Button Popover --- */
+
+/* The parent list item needs to be a positioning anchor */
+.cta-button {
+    position: relative;
+}
+
+    /* When you hover over the button, find the popover inside it */
+    .cta-button:hover .popover-window {
+        display: block;
+        opacity: 10;
+        /* This positions it correctly BELOW the button */
+        top: 280%;
+        bottom: auto; /* We must override the 'bottom' from the other popover */
+    }
+
+    /* This targets the arrow on the extension popover ONLY */
+    .cta-button .popover-window::after {
+        bottom: 100%; /* Position the arrow at the TOP of the popover */
+        top: auto; /* Override the default */
+        border-color: transparent transparent #ffffff transparent; /* Make it point UP */
+    }
+
 
 
 /* --- Wrapper for all SCROLLING content --- */
@@ -308,51 +333,7 @@ h1 {
     padding: 10px;
 }
 
-/* --- MOBILE RESPONSIVE STYLES --- */
-@media (max-width: 750px) {
-    .features-container, .spotlight-container {
-        flex-direction: column;
-    }
 
-    .spotlight-text {
-        text-align: center;
-    }
-
-    /* === CORRECTED MOBILE NAVIGATION STYLES (LOGO LAST) === */
-
-    .nav-container {
-        padding: 0 15px;
-    }
-
-        .nav-container nav {
-            width: 100%;
-        }
-
-        .nav-container ul {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-        }
-
-            .nav-container ul::-webkit-scrollbar {
-                display: none;
-            }
-
-        .nav-container .logo {
-            font-size: 1.5em;
-            padding: 100px 0;
-            /* ===== CSS CHANGE IS HERE ===== */
-            margin-left: 20px; /* Changed from margin-right */
-        }
-
-        .nav-container ul li a {
-            white-space: nowrap;
-        }
-}
 /* --- URL Checker Section Styles --- */
 .url-checker-container {
     max-width: 800px;
