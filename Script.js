@@ -56,3 +56,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// --- SCRIPT FOR DUAL-ACTION DOWNLOAD BUTTON ---
+
+// Find the button on the page
+const downloadBtn = document.getElementById('download-extension-btn');
+
+// Check if the button actually exists on the current page
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', (event) => {
+        // 1. Prevent the browser from immediately going to the install.html page
+        event.preventDefault();
+
+        // 2. Create a hidden link to the zip file and programmatically click it
+        const zipUrl = 'https://github.com/Stan1mir/blokchain-site/raw/main/CryptoVerifierExtension.zip';
+        const link = document.createElement('a');
+        link.href = zipUrl;
+        link.download = 'CryptoVerifierExtension.zip'; // Suggest a filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up the hidden link
+
+        // 3. Now, after a short delay, manually navigate to the install page
+        setTimeout(() => {
+            window.location.href = downloadBtn.href;
+        }, 500); // 500ms delay to ensure the download starts
+    });
+}

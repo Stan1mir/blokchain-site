@@ -136,7 +136,22 @@ nav ul {
         background-color: #2f28b4bb;
     }
 /* --- Styles for the Extension Button Popover --- */
+.cta-button {
+    position: relative;
+}
 
+.extension-popover {
+    /* ... all the popover styles ... */
+    top: 90%;
+    /* ... etc ... */
+}
+
+.cta-button:hover .extension-popover {
+    display: block;
+    opacity: 1;
+    top: 120%;
+}
+/* ... etc ... */
 /* The parent list item needs to be a positioning anchor */
 .cta-button {
     position: relative;
@@ -854,3 +869,23 @@ a.data-card-link {
     .nota-bene-main strong {
         font-style: normal;
     }
+/* --- Style for the API Refresh Note --- */
+.api-refresh-note {
+    text-align: center;
+    max-width: 850px;
+    margin: 30px auto 0 auto;
+    font-size: 0.85em;
+    line-height: 5;
+    color: rgba(0, 0, 0, 0.7); /* Make the base text a bit darker */
+    font-style: normal; /* Change to normal for better readability */
+}
+
+/* Style for the highlighted words */
+.highlight-error {
+    color: #e74c3c; /* A strong, clear red color */
+    font-weight: bold;
+    font-style: normal;
+    background-color: rgba(231, 76, 60, 0.1); /* A very faint red background */
+    padding: 2px 5px;
+    border-radius: 4px;
+}
