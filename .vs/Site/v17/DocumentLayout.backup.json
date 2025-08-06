@@ -98,33 +98,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "macro-factors.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
-              "RelativeDocumentMoniker": "macro-factors.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
-              "RelativeToolTip": "macro-factors.html",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T18:50:11.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "trading-strategies.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
-              "RelativeDocumentMoniker": "trading-strategies.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
-              "RelativeToolTip": "trading-strategies.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T21:56:06.751Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -135,8 +110,7 @@
               "RelativeToolTip": "style.css",
               "ViewState": "AgIAAL4AAAAAAAAAAAAAAM4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-26T18:27:36.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T18:27:36.075Z"
             },
             {
               "$type": "Document",
@@ -194,10 +168,34 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAEIAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACoAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-06-26T18:26:59.08Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "trading-strategies.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
+              "RelativeDocumentMoniker": "trading-strategies.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
+              "RelativeToolTip": "trading-strategies.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-04T21:56:06.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "macro-factors.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
+              "RelativeDocumentMoniker": "macro-factors.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
+              "RelativeToolTip": "macro-factors.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-04T18:50:11.438Z"
             },
             {
               "$type": "Document",
