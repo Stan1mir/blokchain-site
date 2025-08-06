@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:macro-factors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:macro-factors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\Script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -98,23 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "macro-factors.js",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.js",
-              "RelativeDocumentMoniker": "macro-factors.js",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.js",
-              "RelativeToolTip": "macro-factors.js",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAUwF8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-04T19:16:28.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "macro-factors.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
               "RelativeDocumentMoniker": "macro-factors.html",
@@ -145,14 +133,14 @@
               "RelativeDocumentMoniker": "style.css",
               "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css",
               "RelativeToolTip": "style.css",
-              "ViewState": "AgIAAE8DAAAAAAAAAAAIwGoDAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAAAM4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-06-26T18:27:36.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "macro-data.json",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-data.json",
               "RelativeDocumentMoniker": "macro-data.json",
@@ -200,6 +188,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-26T18:26:59.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "macro-factors.js",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.js",
+              "RelativeDocumentMoniker": "macro-factors.js",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.js",
+              "RelativeToolTip": "macro-factors.js",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwF8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-04T19:16:28.491Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "simple-blockchain-demo.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\simple-blockchain-demo.html",
@@ -209,18 +222,6 @@
               "ViewState": "AgIAADEAAAAAAAAAAAAwwFUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-30T00:54:59.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIoAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-26T18:26:59.08Z"
             },
             {
               "$type": "Document",
@@ -332,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Script.js",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\Script.js",
               "RelativeDocumentMoniker": "Script.js",
