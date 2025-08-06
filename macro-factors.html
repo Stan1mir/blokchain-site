@@ -79,9 +79,9 @@
                     <li><a href="index.html" class="logo">blokchain.co.uk</a></li>
                 </ul>
             </nav>
-            <!--=====================================
-            */MASTER NAVIGATION BLOCK - end <<<
-            ===============================================-->
+            <!--========================================
+            */ MASTER NAVIGATION BLOCK - end <<<
+                ========================================-->
         </div>
     </header>
 
@@ -111,27 +111,58 @@
                     <li><strong>A Positive Headwind (> 0%):</strong> This suggests a healthy economic environment. Growth is strong enough to overcome the effects of inflation on your savings. In these times, traditional investments like stocks often perform well because companies are growing.</li>
                     <li><strong>A Negative Headwind (< 0%):</strong> This is a warning sign. It suggests that inflation is eating away at your money faster than the economy is growing to replace it. As the book <em>Crypto Decrypted</em> explains, it is in these moments of "strong headwinds" that investors may begin to look for alternative, scarce assets like Bitcoin that are not as directly tied to these traditional economic factors (Ryan et al., 2023).</li>
                 </ul>
-                <!-- === NEW EXPLANATION SECTION - END === -->
 
-                <hr class="content-divider">
+                <!-- Add your new title here -->
+                <h2>Live Data from the U.S. Federal Reserve</h2>
+
+                <!-- === NEW NOTA BENE - START === -->
+                <p class="nota-bene-main">
+                    <strong>N.B.</strong> The "Economic Headwind" metric is a simplified, descriptive model from the book <em>Crypto Decrypted</em> to illustrate the current economic environment. It is not a predictive tool.
+                </p>
+                <!-- === NEW NOTA BENE - END === -->
                 <!-- === LIVE DATA DASHBOARD - START === -->
                 <div class="live-data-dashboard">
-                    <div class="data-card">
-                        <div class="data-label"><strong>Interest Rate </strong> (10-Year Treasury)</div>
-                        <div class="data-value" id="interest-rate">Loading...</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-label"><strong>Annual Inflation Rate </strong> (CPI)</div>
-                        <div class="data-value" id="inflation-rate">Loading...</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-label">Annual GDP Growth</div>
-                        <div class="data-value" id="gdp-growth">Loading...</div>
-                    </div>
-                    <div class="data-card result-card">
+
+                    <!-- Card 1: Interest Rate -->
+                    <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" class="data-card-link">
+                        <div class="data-card">
+                            <div class="data-label">Interest Rate (10-Year Treasury)</div>
+                            <div class="data-value" id="interest-rate">Loading...</div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Inflation Rate -->
+                    <a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" class="data-card-link">
+                        <div class="data-card">
+                            <div class="data-label">Annual Inflation Rate (CPI)</div>
+                            <div class="data-value" id="inflation-rate">Loading...</div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: GDP Growth -->
+                    <a href="https://fred.stlouisfed.org/series/GDPC1" target="_blank" class="data-card-link">
+                        <div class="data-card">
+                            <div class="data-label">Annual GDP Growth</div>
+                            <div class="data-value" id="gdp-growth">Loading...</div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: Economic Headwind (This one is not a link yet) -->
+                    <div class="data-card result-card" id="headwind-card">
+                        <!-- We add an ID here -->
                         <div class="data-label">Economic Headwind</div>
                         <div class="data-value" id="economic-headwind">Calculating...</div>
+
+                        <!-- === THIS IS THE NEW HIDDEN POPOVER WINDOW === -->
+                        <div class="popover-window" id="headwind-popover">
+                            <h4>About the Economic Headwind</h4>
+                            <p>This metric is calculated as: <strong>Growth - (Interest Rate - Inflation)</strong>.</p>
+                            <p>A <strong>negative number</strong> is a "headwind," suggesting that inflation is eroding purchasing power faster than the economy is growing. In these times, scarce assets like <strong> Bitcoin</strong> can become more attractive.</p>
+                            <!-- We will add the graph here later -->
+                        </div> 
+                        <!-- === END OF POPOVER === -->
                     </div>
+
                 </div>
 
                 <!-- === LIVE DATA DASHBOARD - END === -->
