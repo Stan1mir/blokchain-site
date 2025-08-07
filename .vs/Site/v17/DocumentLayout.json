@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:advanced-cybersecurity.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-energy-crisis.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-energy-crisis.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -83,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:macro-data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -106,136 +106,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "real-world-uses.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\real-world-uses.html",
-              "RelativeDocumentMoniker": "real-world-uses.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\real-world-uses.html",
-              "RelativeToolTip": "real-world-uses.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-20T14:04:58.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "simple-blockchain-demo.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\simple-blockchain-demo.html",
-              "RelativeDocumentMoniker": "simple-blockchain-demo.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\simple-blockchain-demo.html",
-              "RelativeToolTip": "simple-blockchain-demo.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T00:54:59.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "trading-strategies.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
-              "RelativeDocumentMoniker": "trading-strategies.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
-              "RelativeToolTip": "trading-strategies.html",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwFQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T21:56:06.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "what-is-blockchain.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\what-is-blockchain.html",
-              "RelativeDocumentMoniker": "what-is-blockchain.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\what-is-blockchain.html",
-              "RelativeToolTip": "what-is-blockchain.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-17T15:56:10.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "blockchain-in-agriculture.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-in-agriculture.html",
-              "RelativeDocumentMoniker": "blockchain-in-agriculture.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-in-agriculture.html",
-              "RelativeToolTip": "blockchain-in-agriculture.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T12:42:57.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "blockchain-evolution.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-evolution.html",
-              "RelativeDocumentMoniker": "blockchain-evolution.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-evolution.html",
-              "RelativeToolTip": "blockchain-evolution.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-18T23:28:27.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "blockchain-and-ai.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-and-ai.html",
-              "RelativeDocumentMoniker": "blockchain-and-ai.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-and-ai.html",
-              "RelativeToolTip": "blockchain-and-ai.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-02T14:40:21.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "bitcoin-vs-ethereum.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\bitcoin-vs-ethereum.html",
-              "RelativeDocumentMoniker": "bitcoin-vs-ethereum.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\bitcoin-vs-ethereum.html",
-              "RelativeToolTip": "bitcoin-vs-ethereum.html",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T00:11:31.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ai-hardware-gold-rush.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-hardware-gold-rush.html",
-              "RelativeDocumentMoniker": "ai-hardware-gold-rush.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-hardware-gold-rush.html",
-              "RelativeToolTip": "ai-hardware-gold-rush.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-02T19:04:37.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ai-energy-crisis.html",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-energy-crisis.html",
-              "RelativeDocumentMoniker": "ai-energy-crisis.html",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-energy-crisis.html",
-              "RelativeToolTip": "ai-energy-crisis.html",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwFQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-02T19:11:44.565Z",
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css",
+              "RelativeDocumentMoniker": "style.css",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css",
+              "RelativeToolTip": "style.css",
+              "ViewState": "AgIAADwDAAAAAAAAAAAswHoDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-26T18:27:36.075Z",
               "EditorCaption": ""
             },
             {
@@ -246,14 +129,134 @@
               "RelativeDocumentMoniker": "advanced-cybersecurity.html",
               "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\advanced-cybersecurity.html",
               "RelativeToolTip": "advanced-cybersecurity.html",
-              "ViewState": "AgIAACEAAAAAAAAAAAAswFQAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvx4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-08-03T12:24:26.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "simple-blockchain-demo.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\simple-blockchain-demo.html",
+              "RelativeDocumentMoniker": "simple-blockchain-demo.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\simple-blockchain-demo.html",
+              "RelativeToolTip": "simple-blockchain-demo.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-30T00:54:59.075Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "real-world-uses.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\real-world-uses.html",
+              "RelativeDocumentMoniker": "real-world-uses.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\real-world-uses.html",
+              "RelativeToolTip": "real-world-uses.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-20T14:04:58.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "trading-strategies.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
+              "RelativeDocumentMoniker": "trading-strategies.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\trading-strategies.html",
+              "RelativeToolTip": "trading-strategies.html",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwFQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-04T21:56:06.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "what-is-blockchain.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\what-is-blockchain.html",
+              "RelativeDocumentMoniker": "what-is-blockchain.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\what-is-blockchain.html",
+              "RelativeToolTip": "what-is-blockchain.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-17T15:56:10.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "blockchain-in-agriculture.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-in-agriculture.html",
+              "RelativeDocumentMoniker": "blockchain-in-agriculture.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-in-agriculture.html",
+              "RelativeToolTip": "blockchain-in-agriculture.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-30T12:42:57.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "blockchain-evolution.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-evolution.html",
+              "RelativeDocumentMoniker": "blockchain-evolution.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-evolution.html",
+              "RelativeToolTip": "blockchain-evolution.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-18T23:28:27.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "blockchain-and-ai.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-and-ai.html",
+              "RelativeDocumentMoniker": "blockchain-and-ai.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-and-ai.html",
+              "RelativeToolTip": "blockchain-and-ai.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-02T14:40:21.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "bitcoin-vs-ethereum.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\bitcoin-vs-ethereum.html",
+              "RelativeDocumentMoniker": "bitcoin-vs-ethereum.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\bitcoin-vs-ethereum.html",
+              "RelativeToolTip": "bitcoin-vs-ethereum.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-30T00:11:31.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ai-hardware-gold-rush.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-hardware-gold-rush.html",
+              "RelativeDocumentMoniker": "ai-hardware-gold-rush.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-hardware-gold-rush.html",
+              "RelativeToolTip": "ai-hardware-gold-rush.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-02T19:04:37.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ai-energy-crisis.html",
+              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-energy-crisis.html",
+              "RelativeDocumentMoniker": "ai-energy-crisis.html",
+              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ai-energy-crisis.html",
+              "RelativeToolTip": "ai-energy-crisis.html",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwFQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-02T19:11:44.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "digital-self-security.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\digital-self-security.html",
               "RelativeDocumentMoniker": "digital-self-security.html",
@@ -261,12 +264,11 @@
               "RelativeToolTip": "digital-self-security.html",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T01:29:07.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T01:29:07.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "blockchain-in-education.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\blockchain-in-education.html",
               "RelativeDocumentMoniker": "blockchain-in-education.html",
@@ -274,12 +276,11 @@
               "RelativeToolTip": "blockchain-in-education.html",
               "ViewState": "AgIAAB4AAAAAAAAAAAAwwFUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-30T21:09:42.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T21:09:42.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ethereum-and-pos.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\ethereum-and-pos.html",
               "RelativeDocumentMoniker": "ethereum-and-pos.html",
@@ -287,12 +288,11 @@
               "RelativeToolTip": "ethereum-and-pos.html",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-29T23:32:49.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T23:32:49.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Install.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\Install.html",
               "RelativeDocumentMoniker": "Install.html",
@@ -300,12 +300,11 @@
               "RelativeToolTip": "Install.html",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAE8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-06T12:55:12.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T12:55:12.427Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Script.js",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\Script.js",
               "RelativeDocumentMoniker": "Script.js",
@@ -313,12 +312,11 @@
               "RelativeToolTip": "Script.js",
               "ViewState": "AgIAABoAAAAAAAAAAAAIwEUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-02T02:04:26.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T02:04:26.265Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -326,12 +324,11 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-26T18:26:59.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T18:26:59.08Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "macro-factors.html",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\macro-factors.html",
               "RelativeDocumentMoniker": "macro-factors.html",
@@ -339,12 +336,11 @@
               "RelativeToolTip": "macro-factors.html",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAFUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T18:50:11.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T18:50:11.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "CNAME",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\CNAME",
               "RelativeDocumentMoniker": "CNAME",
@@ -356,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -377,18 +373,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-04T19:26:19.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css",
-              "RelativeDocumentMoniker": "style.css",
-              "ToolTip": "C:\\Users\\stank\\OneDrive - RTC Education Ltd\\Documents\\Projects\\Site\\style.css",
-              "RelativeToolTip": "style.css",
-              "ViewState": "AgIAAE4DAAAAAAAAAAAAAHoDAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-26T18:27:36.075Z"
             },
             {
               "$type": "Document",
