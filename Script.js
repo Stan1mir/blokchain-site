@@ -13,22 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Part 2: Handle clicks on any dropdown menu ---
     const allDropdowns = document.querySelectorAll('.dropdown');
+
     allDropdowns.forEach(dropdown => {
         const dropBtn = dropdown.querySelector('.drop-btn');
         if (dropBtn) {
             dropBtn.addEventListener('click', (event) => {
-                event.preventDefault();
+                // Prevent the link from navigating if it's a dropdown trigger
+                if (dropdown.querySelector('.dropdown-content')) {
+                    event.preventDefault();
+                }
 
                 // Logic to handle sub-menus differently
                 const isSubDropdown = dropdown.classList.contains('sub-dropdown');
                 if (isSubDropdown) {
-                    // Prevent click from closing the parent menu
-                    event.stopPropagation();
+                    event.stopPropagation(); // Stop the click from closing the parent menu
                 }
 
                 const isAlreadyOpen = dropdown.classList.contains('open-dropdown');
 
-                // If it's not a sub-menu, close all other main menus
+                // If this is a main dropdown, close all other main dropdowns
                 if (!isSubDropdown) {
                     allDropdowns.forEach(d => {
                         if (!d.classList.contains('sub-dropdown')) {
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
 
-                // Toggle the clicked dropdown
+                // Toggle the open state of the clicked dropdown
                 if (!isAlreadyOpen) {
                     dropdown.classList.add('open-dropdown');
                 } else {
@@ -47,28 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Part 2.1: Handle clicks on sub-menus ---
-    const subMenus = document.querySelectorAll('.sub-menu');
-    subMenus.forEach(subMenu => {
-        const subBtn = subMenu.querySelector('.sub-btn');
-        if (subBtn) {
-            subBtn.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation(); // Prevent closing the parent dropdown
-                const isSubMenuOpen = subMenu.classList.contains('open-dropdown');
-                if (!isSubMenuOpen) {
-                    // Close all other sub-menus
-                    subMenus.forEach(sm => sm.classList.remove('open-dropdown'));
-                    // Open the clicked sub-menu
-                    subMenu.classList.add('open-dropdown');
-                } else {
-                    // Close the clicked sub-menu
-                    subMenu.classList.remove('open-dropdown');
-                }
-            });
-        }
-    });
-    // --- Part 3: Close dropdowns if you click anywhere else on the page ---
+    // --- Part 3: Close all dropdowns if you click anywhere else on the page ---
     window.addEventListener('click', (event) => {
         if (!event.target.closest('.dropdown')) {
             allDropdowns.forEach(d => {
