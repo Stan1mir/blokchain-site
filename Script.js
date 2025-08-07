@@ -47,6 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Part 2.1: Handle clicks on sub-menus ---
+    const subMenus = document.querySelectorAll('.sub-menu');
+    subMenus.forEach(subMenu => {
+        const subBtn = subMenu.querySelector('.sub-btn');
+        if (subBtn) {
+            subBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation(); // Prevent closing the parent dropdown
+                const isSubMenuOpen = subMenu.classList.contains('open-dropdown');
+                if (!isSubMenuOpen) {
+                    // Close all other sub-menus
+                    subMenus.forEach(sm => sm.classList.remove('open-dropdown'));
+                    // Open the clicked sub-menu
+                    subMenu.classList.add('open-dropdown');
+                } else {
+                    // Close the clicked sub-menu
+                    subMenu.classList.remove('open-dropdown');
+                }
+            });
+        }
+    });
     // --- Part 3: Close dropdowns if you click anywhere else on the page ---
     window.addEventListener('click', (event) => {
         if (!event.target.closest('.dropdown')) {

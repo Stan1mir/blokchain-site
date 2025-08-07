@@ -885,7 +885,7 @@ a.data-card-link {
     color: #e74c3c; /* A strong, clear red color */
     font-weight: bold;
     font-style: normal;
-    background-color: rgba(231, 76, 60, 0.1); /* A very faint red background */
+    background-color: rgb(232, 75, 59, 0.20); /* A very faint red background */
     padding: 2px 5px;
     border-radius: 4px;
 }
