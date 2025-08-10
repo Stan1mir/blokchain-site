@@ -498,6 +498,36 @@ h1 {
             left: 0;
             top: 5px;
         }
+.styled-list-numbered {
+    list-style-type: none;
+    counter-reset: step-counter; /* Create a counter */
+    padding-left: 0;
+}
+
+    .styled-list-numbered li {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #333;
+        padding-left: 45px;
+        position: relative;
+        margin-bottom: 20px;
+        counter-increment: step-counter; /* Increment the counter */
+    }
+
+        .styled-list-numbered li::before {
+            content: counter(step-counter); /* Display the counter number */
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #3498db; /* Blue circle */
+            color: #ffffff; /* White number */
+            font-weight: bold;
+        }
 
 .concluding-paragraph {
     text-align: center;
@@ -695,11 +725,11 @@ h1 {
 
     /* Add a hover effect for the trigger link. This is correct. */
     .sub-dropdown > .drop-btn:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgb(225, 226, 236, 0.54);
     }
 .references-section h3 {
     font-size: 1.3em;
-    color: #0d2c4e;
+    color: #a1c8de;
     margin-bottom: 20px;
 }
 

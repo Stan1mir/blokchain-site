@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Blokchain.co.uk Project - Your Smart Guide to Crypto</title>
+    <title> Chainlink - The Oracle</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
     <!--Browser icon-->
-    
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
@@ -20,11 +20,7 @@
 
 </head>
 <body>
-
-    <!-- Background Image Container -->
     <div class="background-image-container"></div>
-
-    <!-- Header Content -->
     <header class="site-header">
         <div class="nav-container">
 
@@ -93,76 +89,59 @@
         </div>
     </header>
 
-    <!-- WRAPPER FOR ALL SCROLLING CONTENT -->
     <div class="page-wrapper">
+        <div class="page-title-overlay">
+            <h2>Chainlink: The Oracle</h2>
+        </div>
 
-        <!-- Top Section -->
-        <main class="content-wrapper">
-            <div class="container">
-                <h1>
-                    What is Blockchain and how Crypto works?
-                </h1>
-                <p class="tagline"></p>
-                <p class="mission">
-                    The mission of this project is to provide clear and effective resources, to help you understand what blockchain  is and how to navigate the Future of Web3 (the new internet), safely and secure.
-                </p>
-                <!-- Home page button "intro"-->
-                <a href="what-is-blockchain.html" class="btn-primary">Learn more here</a>
-                <div class="launch-info">
-                    <p class="launch-date">The technology that is shaping the world</p>
-                    <h2>Bitcoin is not just money</h2>
+        <section class="content-page-section">
+            <div class="content-container">
 
-                </div>
-            </div>
-        </main>
+                <h1>Bridging Blockchains to the Real World</h1>
 
-        <!-- URL Checker --- LATER HERE ;) -->
-        
+                <p>Smart contracts on platforms like Ethereum are powerful, but they have a fundamental limitation: by design, they cannot access data from outside the blockchain. They are like a brilliant computer with no internet connection. This is known as the <strong>"oracle problem."</strong> <strong>Chainlink</strong> is a decentralized oracle network designed to solve this exact problem, acting as a secure and reliable bridge between smart contracts and real-world data, events, and payments.</p>
 
-        <!-- Features Section -->
-        <section class="features-section">
-            <div class="features-container">
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-book-open"></i></div>
-                    <h3>Learn the Basics</h3>
-                    <p>Start from zero with our clear, simple guides on what a blockchain is, how cryptocurrencies work, and why it matters.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Stay Secure</h3>
-                    <p>Navigate the crypto world with confidence. Our security guides and tool will help you to identify scams and protect your digital assets.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
-                    <h3>Get Our Tools</h3>
-                    <p>Use our free URL Checker and Chrome browser extension to get real-time safety alerts and verify the legitimacy of websites.</p>
+                <hr class="content-divider">
+
+                <h2>How Chainlink Works: A 4-Step Process</h2>
+                <p>When a smart contract needs external data (like the current price of a stock or the weather in a specific city), it uses the Chainlink network. The process is a masterpiece of decentralized security (Di Maggio, 2025):</p>
+                <ol class="styled-list-numbered">
+                    <li><strong>Request for Data:</strong> The smart contract creates a request (a Service Level Agreement) that specifies exactly what data it needs.</li>
+                    <li><strong>Nodes Retrieve Data:</strong> Independent computers on the Chainlink network, called "nodes," see this request and retrieve the data from multiple, trusted external sources.</li>
+                    <li><strong>Data is Aggregated:</strong> The Chainlink network then aggregates the data from all the different nodes, comparing their answers to arrive at a single, validated, and trustworthy piece of data.</li>
+                    <li><strong>Data is Delivered:</strong> This single, verified piece of data is fed back to the smart contract on the blockchain, allowing it to execute its logic based on accurate, real-world information.</li>
+                </ol>
+
+                <hr class="content-divider">
+
+                <h2>The LINK Token: The Fuel for the Network</h2>
+                <p>The entire Chainlink ecosystem is powered by its native utility token, <strong>LINK</strong>. This token is not designed to be a currency like Bitcoin; its purpose is to facilitate the functions of the network and create a self-sustaining economy.</p>
+
+                <h3>The Role of LINK:</h3>
+                <ul class="styled-list">
+                    <li><strong>Paying for Services:</strong> Smart contract creators use LINK tokens to pay Chainlink nodes for the service of retrieving and verifying data.</li>
+                    <li><strong>Ensuring Honesty (Staking):</strong> To become a node operator, you must "stake" (lock up) a certain amount of LINK tokens as collateral. If a node provides false data, it can be penalized, and its staked LINK will be taken away, creating a powerful financial incentive for all participants to act honestly.</li>
+                </ul>
+
+                <hr class="content-divider">
+
+                <div class="references-section">
+                    <h3>References</h3>
+                    <ol>
+                        <li>
+                            <a href="[Your Link Here]" target="_blank">
+                                Di Maggio, M. (2025) <em>Blockchain, Crypto and DeFi</em>. Hoboken, NJ: John Wiley & Sons.
+                            </a>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
-        <!-- Security Spotlight Section -->
-        <section class="spotlight-section">
-            <div class="spotlight-container">
-                <!--_____+++ YOUTUBE VIDEO +++  spotlight HERE -->
-                <div class="spotlight-video">
-                    <iframe width="3333" height="1534" src="https://www.youtube.com/embed/n9Lff-cSxLQ" title="What is Phishing? Introduction to Phishing Demo (for Beginners)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="spotlight-text">
-                    <h2>Security Spotlight: What is Phishing?</h2>
-                    <p>Phishing is the most common threat in crypto. Scammers create fake websites that look exactly the same to real ones to trick you and connecting your wallet and steal everything in an instant.</p>
-                    <p>Our tools protect you from these sites in real-time, and our guides teach you how to spot the warning signs yourself.</p>
-                    <a href="#" class="btn-primary">Learn More in Our Security Guide Section!</a>
-                </div>
-            </div>
-        </section> <!-- The white content box correctly ends here -->
-        <!-- The footer is now outside the white box, but inside the main wrapper -->
         <footer class="site-footer-bottom">
             <p>© 2025 blokchain.co.uk - All Rights Reserved</p>
-            <p>Your Smart Guide to Crypto Security</p>
         </footer>
-
-    </div> <!--  Main wrapper </div> ends here -->
-
-    <script src="script.js"></script> <!--JavaScript connection-->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
