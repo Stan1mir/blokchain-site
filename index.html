@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+               script-src 'self' 'unsafe-inline';
+               style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+               font-src 'self' https://cdnjs.cloudflare.com;
+               img-src 'self' data:;
+               frame-src https://www.youtube.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> BloKchain.co.uk Project - Your Smart Guide to Crypto</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <!--Browser icon-->
 
+    <!--Browser icon-->
+    <!--Browser icon-->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
@@ -36,7 +41,7 @@
                         <a href="#" class="drop-btn">Understand Blockchain ▼</a>
                         <div class="dropdown-content">
                             <a href="what-is-blockchain.html">Intro</a>
-                            
+
                             <a href="blockchain-evolution.html">Blockchain 2.0 & Smart Contracts</a>
                             <a href="ethereum-and-pos.html">Ethereum 2: From PoW to PoS</a>
                             <a href="simple-blockchain-demo.html">Live Demo (test here!)</a>
@@ -95,7 +100,7 @@
             <!-- === MASTER NAVIGATION BLOCK - END === -->
         </div>
     </header>
-    
+
     <!-- WRAPPER FOR ALL SCROLLING CONTENT -->
     <div class="page-wrapper">
 
@@ -110,7 +115,7 @@
                     The mission of this project is to provide clear and effective resources, to help you understand what blockchain  is and how to navigate the Future of Web3 (the new internet), safely and secure.
                 </p>
 
-                
+
                 <div class="launch-info">
                     <p class="launch-date">The technology that is shaping the world</p>
                     <h2>Bitcoin is not just money</h2>
@@ -118,7 +123,7 @@
                 </div>
             </div>
         </main>
-        
+
 
         <section class="features-section">
             <div class="features-container">
@@ -145,8 +150,7 @@
             <div class="spotlight-container">
                 <!--_____+++ YOUTUBE VIDEO +++  spotlight HERE -->
                 <div class="spotlight-video">
-                    <iframe width="3333" height="1534" " title="What is Phishing? VIDEO COMING SOON Introduction to Phishing Demo (for Beginners)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player" frameborder="0" allowfullscreen></iframe>                </div>
                 <div class="spotlight-text">
                     <h2>Security Spotlight: What is Phishing?</h2>
                     <p>Phishing is the most common threat in crypto. Scammers create fake websites that look exactly the same to real ones to trick you and connecting your wallet and steal everything in an instant.</p>
@@ -163,6 +167,7 @@
 
     </div> <!--  Main wrapper </div> ends here -->
 
-    <script src="script.js"></script> <!--JavaScript connection-->
+    <script src="script.js"></script>
+    <link rel="manifest" href="site.webmanifest" />
 </body>
 </html>
