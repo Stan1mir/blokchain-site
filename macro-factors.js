@@ -2,7 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const apiKey = 'da66b07e7fe0fe8655f25f956d365354';
+    const apiKey = process.env.FRED_API_KEY; // Read from environment
+    if (!apiKey) {
+        console.error("API Key Missing: You must set the FRED_API_KEY environment variable.");
+    }
     const proxyUrl = 'https://api.allorigins.win/raw?url=';
 
     const interestRateEl = document.getElementById('interest-rate');
