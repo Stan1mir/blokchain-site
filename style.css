@@ -997,10 +997,10 @@ a.data-card-link {
 /* ... The rest of the map styles (columns, children, lines) can remain the same ... */
 
 /* ==================================================================
-   RESPONSIVE / MOBILE SECTION  (added June 2026)
-   Everything below is additive: desktop layout is untouched,
-   these rules only reshape things on smaller screens + add
-   fluid "auto-fitting" typography everywhere.
+   RESPONSIVE / MOBILE SECTION  (v2 — swipeable nav bar)
+   Desktop layout untouched. On mobile the menu stays visible as a
+   horizontal bar you swipe with a finger; tapping a menu opens a
+   full-width panel below the header.
    ================================================================== */
 
 /* --- Fundamentals & safety nets --- */
@@ -1013,14 +1013,14 @@ html {
 }
 
 body {
-    overflow-x: hidden; /* Belt-and-braces: nothing can cause sideways scroll */
+    overflow-x: hidden; /* Nothing can cause sideways page scroll */
 }
 
 img, iframe, video {
     max-width: 100%; /* Media never overflows its container */
 }
 
-/* --- FLUID TYPOGRAPHY (the "dynamic auto fit") ---
+/* --- FLUID TYPOGRAPHY (dynamic auto-fit) ---
    clamp(min, preferred, max): text scales smoothly with the
    viewport between a floor and a ceiling. No sudden jumps. */
 h1 {
@@ -1049,115 +1049,119 @@ h1 {
 
 /* --- Bug fix (affects desktop too): this had padding-right: 1150px,
    which forced horizontal overflow on anything narrower than a
-   large monitor. Replaced with a sane value. --- */
+   large monitor. --- */
 .page-title-overlay {
     padding-right: 30px;
 }
 
-/* --- Hamburger button + mobile brand ---
-   These two elements are injected by script.js on every page,
-   and are invisible on desktop. --- */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #ffffff;
-    font-size: 1.35rem;
-    line-height: 1;
-    padding: 9px 13px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.menu-toggle:focus-visible {
-    outline: 2px solid #3498db;
-    outline-offset: 2px;
-}
-
+/* --- Mobile brand (injected by script.js, hidden on desktop) --- */
 .mobile-brand {
     display: none;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     text-decoration: none;
+    text-align: center;
 }
 
 /* ==================================================================
-   BREAKPOINT 1: <= 950px — the nav can't fit, switch to hamburger
+   BREAKPOINT 1: <= 950px — SWIPEABLE MENU BAR
    ================================================================== */
 @media (max-width: 950px) {
 
     .nav-container {
-        flex-direction: row;             /* override row-reverse */
-        justify-content: space-between;
-        padding: 10px 16px;
+        display: block;            /* brand row on top, menu bar below */
+        max-width: none;
+        padding: 8px 12px 0;
     }
 
-    .menu-toggle,
     .mobile-brand {
-        display: inline-block;
-    }
-
-    /* The whole nav becomes a slide-down panel under the fixed header */
-    .site-header nav {
-        display: none;
-        position: absolute;              /* header is fixed, so this sticks to it */
-        top: 100%;
-        left: 0;
-        right: 0;
-        max-height: calc(100vh - 60px);
-        overflow-y: auto;
-        background-color: rgba(26, 36, 48, 0.97);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .site-header.mobile-nav-open nav {
         display: block;
+        padding-bottom: 6px;
     }
 
+    .site-header nav {
+        position: relative;        /* anchor for the swipe-hint fade */
+    }
+
+    /* The swipeable strip itself */
     nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 6px 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;                      /* finger-scrollable */
+        -webkit-overflow-scrolling: touch;     /* momentum scrolling on iOS */
+        scrollbar-width: none;                 /* hide scrollbar (Firefox) */
+        padding: 0 0 10px;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;                         /* hide scrollbar (Chrome/Safari) */
     }
 
     nav ul li {
-        margin-right: 0;
+        flex: 0 0 auto;            /* items keep natural width, never shrink */
+        margin-right: 8px;
     }
 
-    nav ul li a,
+    /* Menu triggers become tappable "chips" */
     .drop-btn {
-        display: block;
-        padding: 14px 18px;
-        font-size: 1.05em;
+        white-space: nowrap;
+        padding: 8px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 999px;
+        font-size: 0.95em;
+        display: inline-block;
     }
 
-    /* The logo link inside the menu is redundant on mobile —
-       the brand is already shown in the header bar */
+    .dropdown.open-dropdown > .drop-btn {
+        background-color: #3498db;
+        border-color: #3498db;
+    }
+
+    /* The logo li at the end of the strip is redundant —
+       the brand row above replaces it */
     nav ul li:last-child {
         display: none;
     }
 
-    /* Dropdowns become full-width accordions instead of floating panels */
+    /* Fade on the right edge: visual hint that the bar scrolls */
+    .site-header nav::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(26, 36, 48, 0), rgba(26, 36, 48, 0.85));
+        pointer-events: none;      /* never blocks taps */
+    }
+
+    /* --- DROPDOWN PANELS ---
+       A scrolling container clips absolutely-positioned children,
+       so panels switch to position:fixed and pin to the area just
+       below the header (height measured by script.js). */
     .dropdown-content {
-        position: static;
+        position: fixed;
+        top: var(--header-height, 96px);
+        left: 0;
+        right: 0;
         min-width: 0;
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        background-color: rgba(0, 0, 0, 0.25);
+        max-height: calc(100vh - var(--header-height, 96px) - 16px);
+        overflow-y: auto;
+        background-color: rgba(26, 36, 48, 0.97);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
     }
 
     .dropdown-content a {
-        padding-left: 36px; /* indent to show hierarchy */
+        padding: 15px 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
-    /* On touch screens, hover is unreliable ("sticky hover").
-       Disable hover-opening; menus open on tap only (.open-dropdown,
-       handled by script.js). Order matters: the .open-dropdown rule
-       comes after the :hover override so it wins. */
+    /* Touch screens have no reliable hover ("sticky hover") —
+       panels open on tap only. The .open-dropdown rule sits after
+       the :hover override on purpose, so it wins. */
     .dropdown:hover .dropdown-content {
         display: none;
     }
@@ -1166,13 +1170,14 @@ h1 {
         display: block;
     }
 
-    /* Same treatment for nested sub-menus */
+    /* Nested sub-menus render inline inside the panel */
     .sub-menu {
         position: static;
         min-width: 0;
         width: 100%;
         box-shadow: none;
         border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.25);
     }
 
     .sub-dropdown:hover > .sub-menu {
@@ -1183,9 +1188,7 @@ h1 {
         display: block;
     }
 
-    /* iOS Safari renders background-attachment: fixed incorrectly
-       (it disables it and stretches the image). Scroll is the safe
-       behaviour on small screens. */
+    /* iOS Safari renders background-attachment: fixed incorrectly */
     .background-image-container {
         background-attachment: scroll;
     }
@@ -1201,9 +1204,8 @@ h1 {
    ================================================================== */
 @media (max-width: 768px) {
 
-    /* Hero */
     .content-wrapper {
-        padding: 95px 16px 28px;
+        padding: 110px 16px 28px;
         min-height: auto;
     }
 
@@ -1211,7 +1213,6 @@ h1 {
         padding: 26px 18px;
     }
 
-    /* Feature cards: 3-across becomes a single column */
     .features-container {
         flex-direction: column;
         gap: 28px;
@@ -1222,7 +1223,6 @@ h1 {
         flex-basis: auto;
     }
 
-    /* Spotlight: video stacks on top of text */
     .spotlight-container {
         flex-direction: column;
         gap: 24px;
@@ -1232,22 +1232,19 @@ h1 {
         width: 100%;
     }
 
-    /* Two-column intros (text + image) stack */
     .intro-container {
         flex-direction: column;
         gap: 20px;
     }
 
-    /* Content pages: trim the heavy padding */
     .content-page-section {
-        padding: 95px 16px 45px;
+        padding: 110px 16px 45px;
     }
 
     .page-title-overlay {
-        padding: 80px 16px 0;
+        padding: 95px 16px 0;
     }
 
-    /* URL checker: input and button stack */
     .checker-form {
         flex-direction: column;
     }
@@ -1256,13 +1253,10 @@ h1 {
         padding: 12px 25px;
     }
 
-    /* Hover popovers must never be wider than the screen */
     .popover-window {
         width: min(300px, 86vw);
     }
 
-    /* Interactive map: absolute overlay becomes a simple vertical
-       stack, always visible (hover-reveal doesn't exist on touch) */
     .map-generations {
         position: static;
         transform: none;
@@ -1283,7 +1277,6 @@ h1 {
    ================================================================== */
 @media (max-width: 600px) {
 
-    /* Live data dashboard: 2x2 grid becomes a single column */
     .live-data-dashboard {
         grid-template-columns: 1fr;
         gap: 18px;
