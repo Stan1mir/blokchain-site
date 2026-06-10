@@ -1,4 +1,4 @@
-// --- SCRIPT FOR NAVIGATION: DROPDOWNS + MOBILE HAMBURGER MENU ---
+// --- SCRIPT FOR NAVIGATION: SWIPEABLE MOBILE BAR + DROPDOWNS ---
 // NOTE: this file must be named script.js (lowercase) because every
 // page references <script src="script.js"> and GitHub Pages is
 // case-sensitive. The old Script.js (capital S) was 404ing in production.
@@ -7,60 +7,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const header = document.querySelector('.site-header');
     const navContainer = document.querySelector('.nav-container');
-    const nav = document.querySelector('.site-header nav');
+    const navList = document.querySelector('.site-header nav ul');
 
-    // --- Part 0: Inject the mobile brand + hamburger button ---
+    // --- Part 0a: Inject the mobile brand row ---
     // Injected from JS so all 28 pages get it without editing any HTML.
-    // Both elements are display:none on desktop (see style.css).
-    if (header && navContainer && nav) {
-
+    // Hidden on desktop (see style.css).
+    if (navContainer) {
         const brand = document.createElement('a');
         brand.className = 'mobile-brand';
         brand.href = 'index.html';
         brand.textContent = 'blokchain.co.uk';
+        navContainer.prepend(brand);
+    }
 
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'menu-toggle';
-        toggleBtn.setAttribute('aria-label', 'Open navigation menu');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    // --- Part 0b: Keep --header-height in sync ---
+    // The mobile dropdown panels are position:fixed and need to know
+    // exactly where the header ends. We measure it and publish it as
+    // a CSS custom property, re-measuring on resize/rotation.
+    const updateHeaderHeight = () => {
+        if (header) {
+            document.documentElement.style.setProperty(
+                '--header-height',
+                header.offsetHeight + 'px'
+            );
+        }
+    };
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    // Re-measure once everything (fonts, icons) has finished loading
+    window.addEventListener('load', updateHeaderHeight);
 
-        navContainer.prepend(brand);      // left side of the bar
-        navContainer.appendChild(toggleBtn); // right side of the bar
-
-        const closeMobileNav = () => {
-            header.classList.remove('mobile-nav-open');
-            toggleBtn.setAttribute('aria-expanded', 'false');
-            toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        };
-
-        toggleBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const isOpen = header.classList.toggle('mobile-nav-open');
-            toggleBtn.setAttribute('aria-expanded', String(isOpen));
-            toggleBtn.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        // Close the panel when a real page link is tapped
-        // (links with href="#" are dropdown triggers, so ignore those)
-        nav.addEventListener('click', (event) => {
-            const link = event.target.closest('a');
-            if (link) {
-                const href = link.getAttribute('href');
-                if (href && href !== '#') {
-                    closeMobileNav();
-                }
-            }
-        });
-
-        // If the window is resized back to desktop width, reset the menu
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 950) {
-                closeMobileNav();
-            }
-        });
+    // --- Part 0c: Swiping the bar closes any open panel ---
+    // If you're swiping to a different menu, the old panel shouldn't
+    // hang underneath. A plain tap never fires a scroll event, so
+    // this only triggers on a real swipe.
+    if (navList) {
+        navList.addEventListener('scroll', () => {
+            document.querySelectorAll('.dropdown.open-dropdown')
+                .forEach(d => d.classList.remove('open-dropdown'));
+        }, { passive: true });
     }
 
     // --- Part 1: Highlight the link for the current page ---
@@ -104,6 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Toggle the open state of the clicked dropdown
                 if (!isAlreadyOpen) {
                     dropdown.classList.add('open-dropdown');
+
+                    // On the swipeable bar, gently bring a half-visible
+                    // chip fully into view when tapped
+                    if (window.innerWidth <= 950) {
+                        dropBtn.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'nearest'
+                        });
+                    }
                 } else {
                     dropdown.classList.remove('open-dropdown');
                 }
