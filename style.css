@@ -1136,22 +1136,34 @@ h1 {
     }
 
     /* --- DROPDOWN PANELS ---
-       A scrolling container clips absolutely-positioned children,
-       so panels switch to position:fixed and pin to the area just
-       below the header (height measured by script.js). */
+       Two iOS Safari traps live here:
+       1. An ancestor with backdrop-filter (.site-header) becomes the
+          containing block for position:fixed children, so a "fixed"
+          panel gets positioned against the header, not the screen.
+       2. A backdrop-filter element nested inside another
+          backdrop-filter element can fail to PAINT at all on iOS —
+          present and tappable, but invisible.
+       Fix: anchor the panel with position:absolute to the nav (which
+       is position:relative and NOT the scroll container, so the
+       swipe strip can't clip it), and use a near-solid background
+       instead of a second blur layer. */
+    .dropdown {
+        position: static;   /* the li stops being the anchor...      */
+    }
+
     .dropdown-content {
-        position: fixed;
-        top: var(--header-height, 96px);
+        position: absolute; /* ...the nav becomes the anchor instead */
+        top: 100%;          /* = directly below the chip strip       */
         left: 0;
         right: 0;
         min-width: 0;
-        max-height: calc(100vh - var(--header-height, 96px) - 16px);
+        max-height: calc(100vh - var(--header-height, 110px) - 16px);
         overflow-y: auto;
-        background-color: rgba(26, 36, 48, 0.97);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(26, 36, 48, 0.98);
+        backdrop-filter: none;          /* kill the nested blur bug  */
+        -webkit-backdrop-filter: none;
         border-radius: 0 0 10px 10px;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
     }
 
     .dropdown-content a {
@@ -1178,6 +1190,8 @@ h1 {
         box-shadow: none;
         border-radius: 0;
         background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: none;          /* same nested-blur bug */
+        -webkit-backdrop-filter: none;
     }
 
     .sub-dropdown:hover > .sub-menu {
