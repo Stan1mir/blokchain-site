@@ -1304,4 +1304,36 @@ h1 {
     .url-checker-container {
         margin: 40px 12px;
     }
+    /* Mobile-Specific Navigation Overrides */
+@media screen and (max-width: 768px) {
+    
+    /* Ensure the main navigation links stack vertically */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hide the dropdown content by default on mobile screens */
+    .dropdown-content {
+        display: none;
+        position: static; /* This pushes the content down naturally instead of overlapping it */
+        width: 100%;
+        background-color: #f1f1f1; /* You can change this to match your dark/light theme */
+    }
+
+    /* The class triggered by our JavaScript */
+    .dropdown-content.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Make the sub-links easier to tap with your thumb */
+    .dropdown-content a {
+        padding: 12px 16px;
+        display: block;
+        border-bottom: 1px solid #ddd; /* Adds a nice separator line between links */
+    }
+}
 }
