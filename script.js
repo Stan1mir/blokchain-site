@@ -114,4 +114,36 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+});document.addEventListener('DOMContentLoaded', () => {
+    // Select all the dropdown buttons
+    const dropBtns = document.querySelectorAll('.drop-btn');
+
+    dropBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Prevent the link from jumping to the top of the page
+            e.preventDefault();
+
+            // Find the specific dropdown menu connected to the clicked button
+            const dropdownContent = this.nextElementSibling;
+
+            // Toggle the 'show' class on or off
+            dropdownContent.classList.toggle('show');
+
+            // Close any other open dropdowns for a cleaner mobile experience
+            dropBtns.forEach(otherBtn => {
+                if (otherBtn !== this) {
+                    otherBtn.nextElementSibling.classList.remove('show');
+                }
+            });
+        });
+    });
+
+    // Close the dropdown if the user taps anywhere outside of the menu
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.drop-btn')) {
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                content.classList.remove('show');
+            });
+        }
+    });
 });
