@@ -1304,36 +1304,70 @@ h1 {
     .url-checker-container {
         margin: 40px 12px;
     }
-    /* Mobile-Specific Navigation Overrides */
+ /* Mobile-Specific Navigation Overrides - Horizontal Swipe */
 @media screen and (max-width: 768px) {
     
-    /* Ensure the main navigation links stack vertically */
+    /* 1. Make the header the anchor point for the dropdowns */
+    .site-header {
+        position: relative;
+    }
+
+    /* 2. Create the horizontal scrolling area for the nav */
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth swiping on iPhones */
+        scrollbar-width: none; /* Hides scrollbar in Firefox */
+    }
+
+    /* Hides scrollbar in Chrome/Safari/Edge for a cleaner look */
+    nav::-webkit-scrollbar {
+        display: none; 
+    }
+
+    /* 3. Align the buttons in a single horizontal row */
     nav ul {
         display: flex;
-        flex-direction: column;
-        padding: 0;
+        flex-direction: row;
+        flex-wrap: nowrap; /* Forces them to stay on one line */
         margin: 0;
+        padding: 10px 15px;
+        gap: 10px; /* Space between the pill buttons */
     }
 
-    /* Hide the dropdown content by default on mobile screens */
+    /* 4. Keep the list items inline and prevent dropdown clipping */
+    nav ul li {
+        list-style: none;
+        white-space: nowrap; /* Stops button text from breaking into two lines */
+        position: static; /* CRITICAL: Allows dropdowns to escape the scrolling container */
+    }
+
+    /* 5. Style the dropdown content to span the full screen width below the nav */
     .dropdown-content {
         display: none;
-        position: static; /* This pushes the content down naturally instead of overlapping it */
+        position: absolute;
+        top: 100%; /* Pushes it exactly below the header */
+        left: 0;
         width: 100%;
-        background-color: #f1f1f1; /* You can change this to match your dark/light theme */
+        background-color: #1a2b4c; /* Dark background to fix your unreadable text issue! */
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+        z-index: 9999;
+        max-height: 60vh; /* Prevents it from being taller than the screen */
+        overflow-y: auto; /* Allows vertical scrolling inside the menu if it's long */
     }
 
-    /* The class triggered by our JavaScript */
+    /* The class activated by our JavaScript */
     .dropdown-content.show {
         display: flex;
         flex-direction: column;
     }
 
-    /* Make the sub-links easier to tap with your thumb */
+    /* 6. Make the dropdown links readable and tap-friendly */
     .dropdown-content a {
-        padding: 12px 16px;
+        color: #ffffff; /* White text on the dark background */
+        padding: 15px 20px;
         display: block;
-        border-bottom: 1px solid #ddd; /* Adds a nice separator line between links */
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider lines */
     }
-}
 }
