@@ -70,12 +70,18 @@ nav ul {
     }
 
         nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1em;
-            padding: 5px 0;
-            transition: color 0.3s ease;
-        }
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+
+    /* === ADD THESE 4 LINES === */
+    display: flex;
+    align-items: center;      /* Centers text vertically inside the box */
+    min-height: 55px;         /* Forces every menu to be the exact same height */
+    text-align: center;       /* Keeps text neat */
+}
 
             nav ul li a:hover {
                 color: #a7c8e8;
