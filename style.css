@@ -57,14 +57,28 @@ body {
     text-decoration: none;
 }
 
+/* 1. Настройка контейнера меню */
 nav ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: flex;
-    align-items: strech;
+    padding: 0;
+    margin: 0;
 }
 
+/* 2. Настройка самих ссылок */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 15px; /* Отступы: верх, право, низ, лево */
+    display: block;      /* Это важно для выравнивания */
+    transition: background-color 0.3s ease;
+}
+
+/* 3. Эффект наведения */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
     nav ul li {
         margin-right: 25px;
         display: flex;
