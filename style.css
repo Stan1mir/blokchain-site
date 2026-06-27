@@ -76,12 +76,14 @@ nav ul {
     font-size: 1em;
     padding: 5px 0;
     transition: color 0.3s ease;
-
-    /* === ADD THESE 4 LINES === */
+    
+    /* THE FIX */
     display: flex;
-    align-items: center;      /* Centers text vertically inside the box */
-    min-height: 55px;         /* Forces every menu to be the exact same height */
-    text-align: center;       /* Keeps text neat */
+    flex-direction: column;         /* Stacks the text elements vertically */
+    justify-content: space-between; /* Pushes top text UP and bottom arrows DOWN */
+    align-items: center;            /* Keeps the text centered horizontally */
+    height: 100%;                   /* Forces the link to fill the identical stretched boxes */
+    box-sizing: border-box;
 }
 
             nav ul li a:hover {
