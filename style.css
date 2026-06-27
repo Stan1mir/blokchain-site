@@ -62,7 +62,7 @@ nav ul {
     padding: 0;
     list-style: none;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
     nav ul li {
